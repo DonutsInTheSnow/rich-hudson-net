@@ -9,7 +9,12 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "@sanity/image-url": "^2.0.2",
+    "@tailwindcss/typography": "^0.5.19",
+    "framer-motion": "^12.23.26",
     "next": "16.0.10",
+    "next-sanity": "^12.0.0",
     "react": "19.2.1",
     "react-dom": "19.2.1"
   },
