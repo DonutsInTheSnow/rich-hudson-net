@@ -16,7 +16,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="relative pt-32 pb-40 md:pt-40 md:pb-48 overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="container relative z-10 px-6 mx-auto">
         <div className="max-w-4xl mx-auto text-center">
           {/* Tag */}
@@ -28,11 +28,6 @@ export default function Hero() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-8">
             Fast, Modern Websites That Help Your Business Grow
           </h1>
-
-          {/* Subheadline */}
-          <p className="text-xl md:text-2xl leading-relaxed text-gray-100 mb-12 max-w-3xl mx-auto">
-            Next.js-powered sites that load instantly, rank higher on Google, and deliver real results. Built and supported right here in Wolfeboro, NH.
-          </p>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
