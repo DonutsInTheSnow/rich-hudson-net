@@ -31,19 +31,19 @@ export default function AboutPage() {
             </p> */}
 
             <p>
-                I was born in Huntsville, Alabama—son of an Apollo-era rocket scientist who helped beat the Soviets to the moon. We moved north when I was young, and my parents fell in love with New Hampshire&apos;s lakes, mountains, and independent spirit. They built a home in Wolfeboro for retirement. Life took detours, but ten years ago my wife and I made it our own after traveling the country. We&apos;ve seen all 50 states... and the Live Free or <span className="line-through decoration-red-600 decoration-2">Die</span> <span className="font-bold">Fight</span> state is still #1.
+                I was born in Huntsville, Alabama—son of an Apollo-era rocket scientist who helped beat the Soviets to the moon. We moved north when I was young. My parents loved New Hampshire&apos;s lakes and independent spirit. They built a home in Wolfeboro for retirement. Life took detours—ten years ago my wife and I made it our own after traveling the country. We&apos;ve seen all 50 states... and the Live Free or <span className="line-through decoration-red-600 decoration-2">Die</span> <span className="font-bold">Fight</span> state is still #1.
             </p>
 
             <p>
-                Since 2018, I&apos;ve been building clean, fast, modern websites—primarily for small businesses and organizations right here in the Lakes Region and across New Hampshire. I started the old-school way: finding outdated sites, creating improved mockups, and reaching out directly. Cold calling takes grit and thick skin—one sale in fifteen is a win—but persistence and quality deliver results.
-            </p>
-
-                        <p>
-                I especially enjoy serving local owners because I live and work in this community. I value the same things many here do: meritocracy, personal honor, integrity, and real relationships. In a world of faceless remote freelancers, I&apos;m available locally—sometimes even in person. Clients have handed me cash upfront and trusted me to deliver. I return half until they&apos;re satisfied. That&apos;s how business used to be done, and still should be.
+                Since 2018, I&apos;ve been building modern websites—primarily for small businesses and organizations in the Lakes Region and across New Hampshire. I started the old-school way: finding outdated sites, creating improved mockups, and reaching out directly. Cold calling takes a thick skin—one sale in fifteen is a win—but persistence and quality deliver results.
             </p>
 
             <p>
-                I build sites that perform, rank well, and help your business grow—no fluff, no politics, just results. If you value straightforward work from someone who shares New Hampshire&apos;s independent mindset, let&apos;s talk.
+                I especially enjoy serving local owners because I live and work in this community. I value the same things many here do: meritocracy, personal honor, integrity, and real relationships. In a world of faceless remote freelancers, I&apos;m available locally—sometimes even in person. I&apos;ve had clients hand me cash up front and trust me to deliver. I return half until they&apos;re satisfied. That&apos;s how business used to be done. Reputation matters.
+            </p>
+
+            <p>
+                I build sites that perform, rank well, and help your business grow—no fluff, just results.
             </p>
 
           </div>
