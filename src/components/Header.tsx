@@ -10,8 +10,8 @@ const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Blog', href: '/blog' },
+  { name: 'Case Studies', href: '/case-studies' },
   { name: 'Contact', href: '/#contact' },
-  { name: 'Site Specs', href: '/site-specs' },
 ];
 
 export default function Header() {
@@ -79,8 +79,8 @@ export default function Header() {
     if (href === '/') return pathname === '/' && !isContactInView;
     if (href === '/about') return pathname === '/about';
     if (href === '/blog') return pathname.startsWith('/blog');
+    if (href === '/case-studies') return pathname === '/case-studies';
     if (href === '/#contact') return pathname === '/' && isContactInView;
-    if (href === '/site-specs') return pathname === '/site-specs';
     return false;
   };
 
@@ -117,13 +117,13 @@ export default function Header() {
                   onClick={(e) => handleAnchorClick(e, link.href)}
                   className={`text-lg font-medium pb-1 transition-colors ${
                     isActive(link.href)
-                      ? 'text-green-600'
-                      : 'text-gray-700 hover:text-green-600 dark:text-gray-300 dark:hover:text-green-400'
+                      ? 'text-green-400'
+                      : 'text-gray-700 hover:text-green-400 dark:text-gray-300 dark:hover:text-green-400'
                   }`}
                 >
                   {link.name}
                   <span
-                    className={`absolute left-0 bottom-0 h-0.5 bg-green-600 transition-all duration-300 ${
+                    className={`absolute left-0 bottom-0 h-0.5 bg-green-400 transition-all duration-300 ${
                       isActive(link.href) ? 'w-full' : 'w-0 hover:w-full'
                     }`}
                   />

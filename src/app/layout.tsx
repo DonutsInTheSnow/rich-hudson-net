@@ -38,7 +38,7 @@ export default function RootLayout({
             loop
             playsInline
             className="w-full h-full object-cover"
-            poster="/assets/img/aynRand.webp"
+            poster="/assets/img/thanks-bg.webp"
           >
             <source src="/assets/img/hero-bg-vid.mp4" type="video/mp4" />
           </video>

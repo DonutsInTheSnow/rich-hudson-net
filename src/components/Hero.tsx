@@ -40,10 +40,10 @@ export default function Hero() {
             </a>
 
             <a
-              href="/case-studies"
+              href="/site-specs"
               className="inline-flex items-center px-10 py-5 bg-white/20 backdrop-blur-md text-white text-lg font-semibold rounded-full border border-white/30 hover:bg-white/30 transition-all duration-300"
             >
-              View Case Studies
+              View Site Specs
             </a>
           </div>
         </div>
