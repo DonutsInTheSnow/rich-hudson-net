@@ -63,9 +63,11 @@ export default function Header() {
       if (element) {
         const elementPosition = element.getBoundingClientRect().top + window.scrollY;
 
+        const isMobile = window.innerWidth < 768;
+
         window.scrollTo({
           top: elementPosition,
-          behavior: 'smooth',
+          behavior: isMobile ? 'auto' :'smooth',
         });
       }
       setMobileMenuOpen(false);
