@@ -78,7 +78,7 @@ export default async function LatestBlogPost() {
                 <p className="text-gray-500 italic">No excerpt available.</p>
               )}
 
-              <span className="inline-block mt-6 text-blue-600 font-medium hover:underline">
+              <span className="inline-block mt-6 text-green-600 underline font-semibold hover:text-blue-600">
                 Read more →
               </span>
             </div>
