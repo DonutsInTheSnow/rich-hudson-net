@@ -22,7 +22,7 @@ export default function Hero() {
       <div className="container relative z-10 px-6 mx-auto">
         <div className="max-w-4xl mx-auto text-center">
           {/* Tag */}
-          <span className="inline-block bg-green-600/90 backdrop-blur-sm border border-green-400/30 text-white px-6 py-3 rounded-full text-sm font-bold tracking-wider mb-8">
+          <span className="inline-block bg-green-700/50 backdrop-blur-sm border border-green-400/30 text-white px-6 py-3 rounded-full text-sm font-bold tracking-wider mb-8">
             RICH HUDSON • WEB DEVELOPER
           </span>
 
@@ -36,7 +36,7 @@ export default function Hero() {
             <a
               href="#contact"
               onClick={handleContactClick}
-              className="inline-flex items-center px-10 py-5 bg-green-600 text-white text-lg font-semibold rounded-full hover:bg-green-500 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 cursor-pointer"
+              className="inline-flex items-center px-10 py-5 bg-green-700 text-white text-lg font-semibold rounded-full hover:bg-green-800 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 cursor-pointer"
             >
               Get a Free Website Review
             </a>
