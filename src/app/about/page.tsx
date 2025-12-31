@@ -45,10 +45,10 @@ export default function AboutPage() {
               <p className="text-gray-700">
                 An iOS app I created to help people break bad habits and stay off social media for 8 weeks. Track progress, redirect mind chatter, and focus on high-value goals.
               </p>
-              <a href="https://apps.apple.com/us/app/shedooby/id6748308602" target="_blank" rel="noopener" className="mt-4 inline-block text-green-600 font-semibold hover:underline">
+              <a href="https://apps.apple.com/us/app/shedooby/id6748308602" target="_blank" rel="noopener" className="mt-4 inline-block text-green-600 font-semibold underline hover:text-blue-600">
                 Get Shedooby in the App Store →
               </a>
-              <a href="https://shedooby.com" target="_blank" rel="noopener" className="mt-4 inline-block text-green-600 font-semibold hover:underline">
+              <a href="https://shedooby.com" target="_blank" rel="noopener" className="mt-4 inline-block text-green-600 font-semibold underline hover:text-blue-600">
                 Visit shedooby.com →
               </a>
             </div>
@@ -59,11 +59,11 @@ export default function AboutPage() {
                 Guitarist, songwriter, and co-founder of BOB (1990s Atlanta band). Five albums, East Coast tours, and reunion shows in 2018. Still writing and playing today.
               </p>
               <div className="mt-4 space-y-2">
-                <a href="https://bob-atlanta.com" target="_blank" rel="noopener" className="block text-green-600 font-semibold hover:underline">
+                <a href="https://bob-atlanta.com" target="_blank" rel="noopener" className="block text-green-600 font-semibold underline hover:text-blue-600">
                   bob-atlanta.com →
                 </a>
                 <p className="text-gray-700">A site I built for a talented Wolfeboro songwriter for his Already Ghosts project:</p>
-                <a href="https://thealreadyghosts.com" target="_blank" rel="noopener" className="block text-green-600 font-semibold hover:underline">
+                <a href="https://thealreadyghosts.com" target="_blank" rel="noopener" className="block text-green-600 font-semibold underline hover:text-blue-600">
                   thealreadyghosts.com →
                 </a>
               </div>
@@ -72,7 +72,7 @@ export default function AboutPage() {
 
           <div className="mt-16 text-center">
             <p className="text-2xl text-gray-800">
-              Ready to upgrade your online presence? <Link href="/#contact" className="text-green-600 font-bold hover:underline">Let&apos;s go!</Link>
+              Ready to upgrade your online presence? <Link href="/#contact" className="text-green-600 font-bold underline hover:text-blue-600">Let&apos;s go!</Link>
             </p>
           </div>
         </div>

@@ -36,7 +36,7 @@ export default function PrivacyPolicy() {
           <h2 className="text-3xl font-bold text-gray-900 mt-12">Contact</h2>
           <p>
             If you have any questions about this Privacy Policy, please use the{' '}
-            <Link href="/#contact" className="text-blue-600 hover:underline font-medium">
+            <Link href="/#contact" className="text-green-600 underline hover:text-blue-600 font-semibold">
               Contact form
             </Link>{' '}
             on the home page.

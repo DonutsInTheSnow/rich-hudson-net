@@ -56,7 +56,7 @@ export default async function IndexPage() {
             )}
 
               <div className="p-6">
-                <h2 className="text-2xl font-semibold mb-2 group-hover:text-blue-600 transition">
+                <h2 className="text-2xl font-semibold mb-2 text-green-600 underline group-hover:text-blue-600 transition">
                   {post.title}
                 </h2>
                 <p>{new Date(post.publishedAt).toLocaleDateString()}</p>

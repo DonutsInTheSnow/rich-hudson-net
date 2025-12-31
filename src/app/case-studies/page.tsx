@@ -115,14 +115,13 @@ export default function CaseStudiesPage() {
                   <div className="bg-white rounded-xl shadow-[inset_0_0_7px_2px_rgba(0,0,0,0.1)] p-8">
                     {/* Title + Icon Row */}
                     <div className="flex items-center gap-3 mb-3">
-                      <ArrowTopRightOnSquareIcon className="h-6 w-6 text-green-600 shrink-0" />
                       <a
                         href={c.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-2xl font-bold text-green-600 hover:underline"
+                        className="text-2xl font-bold text-green-600 underline hover:text-blue-600"
                       >
-                        {c.title}
+                        <ArrowTopRightOnSquareIcon className="h-6 w-6 shrink-0 inline-flex pe-1" />{c.title}
                       </a>
                     </div>
 

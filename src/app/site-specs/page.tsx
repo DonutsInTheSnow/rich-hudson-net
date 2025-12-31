@@ -2,7 +2,7 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
+// import Link from 'next/link';
 import { CheckIcon } from '@heroicons/react/24/solid';
 import { motion, Variants } from 'framer-motion';
 
@@ -44,7 +44,7 @@ export default function SiteSpecsPage() {
               src="/assets/img/site-specs.webp"
               alt="Screenshot of richhudson.net hero section"
               fill
-              className="object-contain bg-gray-100 shadow-[inset_0_0_7px_2px_rgba(0,0,0,0.1)]"
+              className="object-contain bg-gray-100 shadow-[inset_0_0_7px_2px_rgba(0,0,0,0.1)] p-5"
               priority
             />
           </div>
@@ -52,7 +52,7 @@ export default function SiteSpecsPage() {
           {/* Intro Text */}
           <div className="text-xl max-w-none text-gray-700 space-y-6 order-1 md:order-2">
             <p>
-              <strong>richhudson.net</strong> is my active portfolio, built to showcase the kind of fast, modern, high-performance websites I create for clients.
+              <strong>richhudson.net</strong> is my active portfolio, built to showcase the kind of fast, modern, high-performance websites I can create for clients.
             </p>
 
             <p>
@@ -60,15 +60,15 @@ export default function SiteSpecsPage() {
             </p>
 
             <p>
-              It serves as a real-world example of the clean, high-performance websites I deliver — using modern tools that prioritize speed, SEO, and long-term maintainability over outdated or bloated platforms.
+              It uses modern tools that prioritize speed, SEO, and long-term maintainability over outdated or bloated platforms. It was built leveraging AI tools to generate some assets, like the landing page video, and to streamline development. 
             </p>
 
-            <p>
+            {/* <p>
               Want a site like this, customized for your brand and goals?{' '}
               <Link href="/#contact" className="text-blue-600 font-bold hover:underline">
                 Let&apos;s talk.
               </Link>
-            </p>
+            </p> */}
           </div>
         </div>
 
