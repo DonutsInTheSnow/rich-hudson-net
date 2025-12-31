@@ -2,7 +2,6 @@
 'use client';
 
 import Image from 'next/image';
-// import Link from 'next/link';
 import { CheckIcon } from '@heroicons/react/24/solid';
 import { motion, Variants } from 'framer-motion';
 
@@ -52,7 +51,7 @@ export default function SiteSpecsPage() {
           {/* Intro Text */}
           <div className="text-xl max-w-none text-gray-700 space-y-6 order-1 md:order-2">
             <p>
-              <strong>richhudson.net</strong> is my active portfolio, built to showcase the kind of fast, modern, high-performance websites I can create for clients.
+              <strong>richhudson.net</strong> is my active portfolio, built to showcase the kind of fast, modern, high-performance website I can create for you.
             </p>
 
             <p>
@@ -63,12 +62,6 @@ export default function SiteSpecsPage() {
               It uses modern tools that prioritize speed, SEO, and long-term maintainability over outdated or bloated platforms. It was built leveraging AI tools to generate some assets, like the landing page video, and to streamline development. 
             </p>
 
-            {/* <p>
-              Want a site like this, customized for your brand and goals?{' '}
-              <Link href="/#contact" className="text-blue-600 font-bold hover:underline">
-                Let&apos;s talk.
-              </Link>
-            </p> */}
           </div>
         </div>
 
