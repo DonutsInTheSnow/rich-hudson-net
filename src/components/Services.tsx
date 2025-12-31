@@ -141,12 +141,12 @@ export default function Services() {
             <strong>Note:</strong> I work on lean, high performance solutions rather than bulky platforms like WordPress. My current focus is on static and dynamic React/Next.js sites. I have limited e-commerce experience (one small merch store), but I&apos;m actively exploring modern Next.js-based alternatives for local businesses wanting simple online sales.
           </p>
 
-          <p className="text-center mt-8 text-xl font-medium text-gray-900">
-            Ready for a site that loads fast, ranks well, and reflects your business?{' '}
+          <p className="mt-8 text-xl max-w-3xl mx-auto font-semibold text-gray-700">
+            Ready for a site that loads fast, ranks well, and reflects your business? I&apos;m not into hard-selling. I can offer you web options that fit your business and your budget. No pressure!{' '}
             <Link
               href="/#contact"
               onClick={handleContactClick}
-              className="text-green-600 hover:underline font-bold cursor-pointer"
+              className="text-green-600 underline hover:text-blue-600 font-bold cursor-pointer"
             >
               Let&apos;s talk.
             </Link>

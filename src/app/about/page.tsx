@@ -72,7 +72,7 @@ export default function AboutPage() {
 
           <div className="mt-16 text-center">
             <p className="text-2xl text-gray-800">
-              Ready to upgrade your online presence? <Link href="/#contact" className="text-green-600 font-bold underline hover:text-blue-600">Let&apos;s go!</Link>
+              Ready to upgrade your online presence? <Link href="/#contact" className="text-green-600 font-bold underline hover:text-blue-600">Let&apos;s connect.</Link>
             </p>
           </div>
         </div>

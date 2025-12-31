@@ -28,7 +28,7 @@ export default function Hero() {
 
           {/* Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-8">
-            Building Websites That Launch Your Business 
+            Fast, Modern Websites That Help Your Business Grow 
           </h1>
 
           {/* CTAs */}
