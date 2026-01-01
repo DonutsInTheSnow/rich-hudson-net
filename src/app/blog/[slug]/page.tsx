@@ -113,10 +113,9 @@ export default async function PostPage({
 
   const imageUrl = post.image?.asset?.url ?? null;
   const pageUrl = `https://richhudson.net/blog/${slug}`;
-  const shareTitle = encodeURIComponent(post.title);
   const shareUrl = encodeURIComponent(pageUrl);
 
-  const twitterUrl = `https://x.com/intent/post?url=${shareUrl}&text=${shareTitle}`;
+  const twitterUrl = `https://x.com/intent/tweet?url=${shareUrl}`;
   const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`;
   const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
 
