@@ -12,6 +12,7 @@ const POSTS_QUERY = `*[
   _id,
   title,
   slug,
+  excerpt,
   publishedAt,
   image{
     alt,
@@ -59,6 +60,7 @@ export default async function IndexPage() {
                 <h2 className="text-2xl font-semibold mb-2 text-green-600 underline group-hover:text-blue-600 transition">
                   {post.title}
                 </h2>
+                <p className="text-gray-700 font-semibold mb-3">{post.excerpt}</p>
                 <p>{new Date(post.publishedAt).toLocaleDateString()}</p>
               </div>
             </Link>
