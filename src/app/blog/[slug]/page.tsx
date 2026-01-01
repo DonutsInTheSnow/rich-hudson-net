@@ -66,15 +66,53 @@ export async function generateMetadata(
     };
   }
 
-  const ogImage = post.image?.asset?.url || "/assets/img/site-specs.webp"; // fallback to your hero screenshot
+
+  const SITE_URL = "https://richhudson.net";
+
+  // const ogImage = post.image?.asset?.url || "/assets/img/site-specs.webp"; 
+  const ogImage = post.image?.asset?.url 
+    ? new URL(post.image.asset.url, SITE_URL).toString()
+    : `${SITE_URL}/assets/img/site-specs.webp`;
+
+
+  // return {
+  //   title: post.title,
+  //   description: post.body[0]?.children?.[0]?.text?.slice(0, 160) || "Blog post by Rich Hudson",
+  //   openGraph: {
+  //     title: post.title,
+  //     description: post.body[0]?.children?.[0]?.text?.slice(0, 160) || "Blog post by Rich Hudson",
+  //     url: `https://richhudson.net/blog/${slug}`,
+  //     type: "article",
+  //     publishedTime: post.publishedAt,
+  //     images: [
+  //       {
+  //         url: ogImage,
+  //         width: 1200,
+  //         height: 630,
+  //         alt: post.image?.alt || post.title,
+  //       },
+  //     ],
+  //   },
+  //   twitter: {
+  //     card: "summary_large_image",
+  //     title: post.title,
+  //     description: post.body[0]?.children?.[0]?.text?.slice(0, 160) || "Blog post by Rich Hudson",
+  //     images: [ogImage],
+  //   },
+  // };
 
   return {
     title: post.title,
-    description: post.body[0]?.children?.[0]?.text?.slice(0, 160) || "Blog post by Rich Hudson",
+    description:
+      post.body[0]?.children?.[0]?.text?.slice(0, 160) ??
+      "Blog post by Rich Hudson",
+
     openGraph: {
       title: post.title,
-      description: post.body[0]?.children?.[0]?.text?.slice(0, 160) || "Blog post by Rich Hudson",
-      url: `https://richhudson.net/blog/${slug}`,
+      description:
+        post.body[0]?.children?.[0]?.text?.slice(0, 160) ??
+        "Blog post by Rich Hudson",
+      url: `${SITE_URL}/blog/${slug}`,
       type: "article",
       publishedTime: post.publishedAt,
       images: [
@@ -82,17 +120,21 @@ export async function generateMetadata(
           url: ogImage,
           width: 1200,
           height: 630,
-          alt: post.image?.alt || post.title,
+          alt: post.image?.alt ?? post.title,
         },
       ],
     },
+
     twitter: {
       card: "summary_large_image",
       title: post.title,
-      description: post.body[0]?.children?.[0]?.text?.slice(0, 160) || "Blog post by Rich Hudson",
+      description:
+        post.body[0]?.children?.[0]?.text?.slice(0, 160) ??
+        "Blog post by Rich Hudson",
       images: [ogImage],
     },
   };
+
 }
 
 export default async function PostPage({
