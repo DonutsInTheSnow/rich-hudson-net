@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PreconnectLinks from '@/components/PreconnectLinks';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -96,6 +97,9 @@ export default function RootLayout({
 
         <div className="fixed inset-0 -z-10 bg-linear-to-br from-black/80 via-black/60 to-black/40 pointer-events-none" />
 
+        <PreconnectLinks />
+        <Header />
+
         {/* Google tag (gtag.js) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-SYX1ZSWC48"
@@ -110,7 +114,6 @@ export default function RootLayout({
           `}
         </Script>
 
-        <Header />
         <div className="flex-1 relative z-0">{children}</div>
         <Footer />
       </body>
