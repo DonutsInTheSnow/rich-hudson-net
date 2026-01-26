@@ -74,6 +74,7 @@ const cases = [
     subtitle: 'Performance & Accessibility Tribute',
     url: 'https://donutsinthesnow.github.io/keith-e-lee',
     paragraphs: [
+      '-->This GitHub Pages site is currently flagged as "dangerous" by Google Chrome due to a false positive from Safe Browsing (common with static GitHub-hosted projects). The site is fully static, contains no forms, payment requests, or malicious elements—it\'s a safe memorial tribute. It\'s under review with Google; you can bypass the warning temporarily or view it safely in other browsers like Firefox/Edge. I\'m working to resolve it.<--',
       'This site commemorates my friend Keith E Lee—an Atlanta-based artist, guitarist, writer, and radio host—who took his own life in 2020.',
       'Upgrades included: removing unused code, optimizing performance (with a 35-point boost), adding SEO-rich metadata targeting Atlanta and Georgia, and splitting the original Single Page Application into multiple pages for better navigation and readability. I also improved color contrast, font sizes, and accessibility.',
     ],
