@@ -26,7 +26,7 @@ const nextConfig: NextConfig = {
               "img-src 'self' https: data: blob:; " +
               "font-src 'self' data:; " +
               "connect-src 'self' https://api.web3forms.com https://web3forms.com https://*.google-analytics.com https://*.analytics.google.com; " +
-              "form-action 'self' https://api.web3forms.com https://web3forms.com; * " +
+              "form-action 'self' https://api.web3forms.com https://web3forms.com *; " +
               "frame-src 'none'; " +
               "object-src 'none'; " +
               "base-uri 'self';"
