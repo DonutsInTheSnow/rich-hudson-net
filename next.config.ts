@@ -21,7 +21,7 @@ const nextConfig: NextConfig = {
             key: 'Content-Security-Policy',
             value:
               "default-src 'self'; " +
-              "script-src 'self' 'unsafe-inline' https://web3forms.com https://www.googletagmanager.com https://www.google-analytics.com; " +
+              "script-src 'self' 'unsafe-inline' https://api.web3forms.com https://web3forms.com https://www.googletagmanager.com https://www.google-analytics.com; " +
               "style-src 'self' 'unsafe-inline'; " +
               "img-src 'self' https: data: blob:; " +
               "font-src 'self' data:; " +
