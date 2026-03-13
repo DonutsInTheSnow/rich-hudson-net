@@ -2,6 +2,23 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid';
 
 const cases = [
   {
+    title: 'DJ\'s Septic Pumping Service, Inc.',
+    subtitle: 'Local SEO & Performance',
+    url: 'https://djssepticpumping.com/',
+    paragraphs: [
+      'The client, a family-owned septic pumping business serving Wolfeboro and the Lakes Region since 1983, needed a faster website to improve Google rankings and user experience on mobile.',
+      'The original site used a heavy Bootstrap 4 template with over 100 files, including bloated vendor scripts (AOS, counter-up, Venobox), Google Fonts CDN (750ms lag), and unoptimized JPG images. Mobile PageSpeed was stuck in the low 50s.',
+      'We rebuilt it lean:',
+      '• Removed unnecessary vendor files (replaced animations with vanilla JS/CSS, static testimonials instead of Owl Carousel).',
+      '• Served fonts locally (WOFF2 subsets).',
+      '• Converted images to WebP.',
+      '• Added robots.txt, sitemap.xml, Open Graph meta, CSP.',
+      '• Inlined critical CSS, deferred non-critical resources, enabled gzip.',
+      'Result: Reduced files to ~34, eliminated render-blocking delays, and boosted mobile Performance to 93, Accessibility to 95, Best Practices & SEO to 100. Faster load times support better rankings and happier visitors in a local service market.',
+      'This project shows why lightweight, modern techniques beat legacy templates for small-business sites.'
+    ],
+  },
+  {
     title: 'Rourke Builders',
     subtitle: 'SEO & Traffic Growth',
     url: 'https://rourkebuilders.com/',
