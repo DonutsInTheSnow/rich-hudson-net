@@ -36,9 +36,9 @@ interface Service {
 export default function Services() {
   const services: Service[] = [
     {
-      title: 'Modern Static & React Websites',
+      title: 'Modern Static Websites',
       description:
-        'Blazing-fast, SEO-friendly sites built with Next.js, React, TypeScript, and Tailwind CSS. Deployed on Vercel for top-tier performance and reliability.',
+        'Blazing-fast, SEO-optimized static sites built with clean HTML, CSS, and JavaScript. Hosted on GoDaddy for reliable, high-performance delivery.',
       highlights: [
         'Mobile-first responsive design',
         'Excellent Google PageSpeed scores (90-100)',
@@ -52,9 +52,9 @@ export default function Services() {
         'Custom web apps with server-side functionality using Node.js, Express, MongoDB, and Cloudinary for image management.',
       highlights: [
         'User authentication & dashboards',
-        'Content management tools',
-        'API integrations',
+        'Content management & admin tools',
         'Secure and scalable',
+        'Modern React/Next.js stacks when the project calls for it',
       ],
     },
     {
@@ -102,7 +102,7 @@ export default function Services() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900">Services</h2>
           <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
-            I build clean, fast, modern websites that help your business grow — using the latest tools and best practices.
+            Lightweight, high-performance websites tailored to your needs — using only the minimal tech stack required for speed, clean code, and strong search rankings. No unnecessary frameworks or bloat. Proven results: mobile scores jumping from the 50s to 90s.
           </p>
         </div>
 
@@ -138,11 +138,11 @@ export default function Services() {
 
         <div className="mt-16">
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            <strong>Note:</strong> I work on lean, high performance solutions rather than bulky platforms like WordPress. My current focus is on static and dynamic React/Next.js sites. I have limited e-commerce experience (one small merch store), but I&apos;m actively exploring modern Next.js-based alternatives for local businesses wanting simple online sales.
+            <strong>Specializing in</strong> lean, high-performance solutions — no bulky platforms like WordPress unless truly required. Prioritizing clean HTML/CSS/JS for speed, SEO, and simplicity. For e-commerce, I use Shopify (with custom app experience) to deliver straightforward online sales for local businesses.
           </p>
 
           <p className="mt-8 text-xl max-w-3xl mx-auto font-semibold text-gray-700">
-            Ready for a site that loads fast, ranks well, and reflects your business? I&apos;m not into hard-selling. I can offer you web options that fit your business and your budget. No pressure!{' '}
+            Ready for a site that loads fast, ranks well, and reflects your business? I can offer you web options that fit your business and your budget. {' '}
             <Link
               href="/#contact"
               onClick={handleContactClick}

@@ -51,15 +51,15 @@ export default function SiteSpecsPage() {
           {/* Intro Text */}
           <div className="text-xl max-w-none text-gray-700 space-y-6 order-1 md:order-2">
             <p>
-              <strong>richhudson.net</strong> is my active portfolio, built to showcase the kind of fast, modern, high-performance website I can create for you.
+              <strong>richhudson.net</strong> is my live portfolio—built with Next.js, React, TypeScript, Tailwind CSS, Sanity.io (for the blog), and hosted on Vercel.
             </p>
 
             <p>
-              This site is designed to load instantly, rank well on Google, and convert visitors into inquiries.
+              This stack is honestly overkill for what the site needs, but it gave me hands-on experience with modern frameworks. The same fast-loading, SEO-strong experience could easily be delivered with clean HTML, CSS, and JavaScript—no frameworks required.
             </p>
 
             <p>
-              It uses modern tools that prioritize speed, SEO, and long-term maintainability over outdated or bloated platforms. It was built leveraging AI tools to generate some assets, like the landing page video, and to streamline development. 
+              I used it here to demonstrate capability, but for your business, I choose the lightest effective tools: speed and results first, complexity only when truly justified. 
             </p>
 
           </div>
