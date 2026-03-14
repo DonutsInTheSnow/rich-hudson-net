@@ -23,31 +23,11 @@ const cases = [
     subtitle: 'SEO & Traffic Growth',
     url: 'https://rourkebuilders.com/',
     paragraphs: [
-      'John discovered my web development services via Sally at Butternuts Good Dishes and approached me with a vision: a partially dynamic website for Rourke employees to effortlessly create, read, update, and delete projects. He also had big goals—top search engine rankings and targeted ad campaigns—and asked if I could connect him with a marketing expert. I recommended a trusted pro.',
-      'While SEO was new territory for me, I dove in, equipping the site with Open Graph Metatags, Google and Facebook scripts, a sitemap, an in-site Blog, a Privacy Policy, and a Thank You page for Contact Form submissions. These upgrades turbocharged marketing efforts, tracking, and ads. The payoff? Rourke\'s website traffic has skyrocketed, driving more eyes to the business.',
-      'John elected to add a full hero section video. While videos are known to impact site performance, the trade-off may be justified given the 80% increase in conversion rates according to marketing industry analysis.',
-
-      <> 
-        {' '}Epilogue: I handed the site over to a Las Vegas marketing agency in mid-2024. A recent speed test shows their {' '}
-        <a 
-          href="https://pagespeed.web.dev/analysis/https-rourkebuilders-com/nf4m2ailh8?form_factor=mobile" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="text-green-600 underline font-bold hover:text-green-700"
-        >
-          mobile PageSpeed score 
-        </a> is a sluggish 55/100. For comparison, Next.js sites I build today — even with full hero videos — consistently score 90+ on mobile. Check out the performance for {' '}
-        <a 
-          href="https://pagespeed.web.dev/analysis/https-richhudson-net/vz4gaoqor2?form_factor=mobile" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="text-green-600 underline font-bold hover:text-green-700"
-        >
-          richhudson.net
-        </a>.
-      </>,
-
-      'This experience reinforced why Next.js has become my go-to framework for clients who want fast, future-proof websites that help their business grow.',
+      'John found me through a mutual contact and wanted a dynamic project management site for his team (CRUD functionality). He also aimed for strong SEO rankings and ad campaigns, so I connected him with a reliable marketing specialist.',
+      'I added Open Graph tags, tracking scripts, sitemap, blog, privacy policy, and form thank-you pages to support SEO and ads. Traffic grew significantly as a result.',
+      'He added a hero video — a performance trade-off, but justified by industry data showing ~80% conversion lifts from video.',
+      'Handed off to a Las Vegas agency in mid-2024. Their current mobile PSI is 60. For contrast, my recent vanilla JavaScript renovation of DJ\s is 93',
+      'These days browsers have excellent built-in tools for things like smooth scrolling, fade-ins, and subtle animations. By using those native features (plain HTML, CSS, and clean JavaScript) instead of older add-on libraries, I can deliver the same great look and feel with far less code and much faster speeds.',
     ],
   },
   {
@@ -69,15 +49,6 @@ const cases = [
     ],
   },
   {
-    title: 'Butternuts',
-    subtitle: 'Local Refresh & SEO',
-    url: 'https://butternutsgooddishes.com',
-    paragraphs: [
-      'Theresa Tocio tapped me to refresh Butternuts Good Dishes\' website after taking over from Sally, one of my first local clients. As neighbors in Wolfeboro\'s tight-knit community, Theresa and I teamed up. She craved a modern, clean look to showcase her new product line.',
-      'I delivered, boosting SEO with a sitemap, robots.txt, and Content Security Policy, plus a Facebook feed for daily specials. We broke the single-page layout into multiple pages for a breezy feel and added borders to gallery images.',
-    ],
-  },
-  {
     title: 'Ingram',
     subtitle: 'Audio Content Organization',
     url: 'https://ingramengineering.net',
@@ -86,16 +57,6 @@ const cases = [
       'We tapped Amazon S3 to store the extensive collection, tackling the time-intensive task of organizing them with smart naming. Beyond audio, the site packs in rich content—critical reviews, videos, and detailed product specs—making it a go-to resource for audio pros.',
     ],
   },
-  // {
-  //   title: 'Keith E Lee',
-  //   subtitle: 'Performance & Accessibility Tribute',
-  //   url: 'https://donutsinthesnow.github.io/keith-e-lee',
-  //   paragraphs: [
-  //     '-->This GitHub Pages site is currently flagged as "dangerous" by Google Chrome due to a false positive from Safe Browsing (common with static GitHub-hosted projects). The site is fully static, contains no forms, payment requests, or malicious elements—it\'s a safe memorial tribute. It\'s under review with Google; you can bypass the warning temporarily or view it safely in other browsers like Firefox/Edge. I\'m working to resolve it.<--',
-  //     'This site commemorates my friend Keith E Lee—an Atlanta-based artist, guitarist, writer, and radio host—who took his own life in 2020.',
-  //     'Upgrades included: removing unused code, optimizing performance (with a 35-point boost), adding SEO-rich metadata targeting Atlanta and Georgia, and splitting the original Single Page Application into multiple pages for better navigation and readability. I also improved color contrast, font sizes, and accessibility.',
-  //   ],
-  // },
 ];
 
 export default function CaseStudiesPage() {
@@ -116,7 +77,7 @@ export default function CaseStudiesPage() {
                 Your website is often the first impression customers have of your business—like a front yard that&apos;s either welcoming or overgrown.
                 Many sites I see are like gardens left untended for years: confusing, slow, broken links, forgotten blogs, fonts almost unreadable on mobile. They turn visitors away before they ever step inside. Consumers judge quickly—and harshly. It&apos;s their money, after all.
                 You don&apos;t need an extravagant showcase to stand out. A clean, fast, easy-to-navigate site built on modern tools invites repeat visits and turns interest into action.
-                I&apos;m a Wolfeboro-based developer focused on performance, clarity, and long-term results. If your current site feels outdated or underperforming, let&apos;s talk—no pressure, just an honest conversation about what&apos;s possible.
+                I&apos;m a Wolfeboro-based developer focused on performance, clarity, and long-term results. If your current site feels outdated or underperforming, let&apos;s talk about what&apos;s possible.
               </p>
             </div>
           </div>
