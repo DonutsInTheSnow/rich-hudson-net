@@ -26,7 +26,7 @@ const cases = [
       'John found me through a mutual contact and wanted a dynamic project management site for his team (CRUD functionality). He also aimed for strong SEO rankings and ad campaigns, so I connected him with a reliable marketing specialist.',
       'I added Open Graph tags, tracking scripts, sitemap, blog, privacy policy, and form thank-you pages to support SEO and ads. Traffic grew significantly as a result.',
       'He added a hero video — a performance trade-off, but justified by industry data showing ~80% conversion lifts from video.',
-      'Handed off to a Las Vegas agency in mid-2024. Their current mobile PSI is 60. For contrast, my recent vanilla JavaScript renovation of DJ\s is 93',
+      'Handed off to a Las Vegas agency in mid-2024. Their current mobile PSI is 60. For contrast, my recent vanilla JavaScript renovation of DJ\s is 93.',
       'These days browsers have excellent built-in tools for things like smooth scrolling, fade-ins, and subtle animations. By using those native features (plain HTML, CSS, and clean JavaScript) instead of older add-on libraries, I can deliver the same great look and feel with far less code and much faster speeds.',
     ],
   },
@@ -36,9 +36,24 @@ const cases = [
     url: 'https://actionkingservices.com',
     paragraphs: [
       'Web development often involves discovery—and always perseverance. While building Action King Services\' new site, I discovered that some hosting providers inject scripts for "performance monitoring" that ironically degrade site speed. By implementing a strong Content Security Policy (CSP), I caught and addressed these issues, improving performance metrics and SEO.',
-      'Perseverance came from a campaign I launched while working on the NHASH site. After mocking up 30 websites in 30 days and receiving zero immediate leads, I moved on. Six months later, Karen King reached out for a redesign. That cold campaign ultimately led to a great partnership and a high-performing, SEO-optimized site.',
+    <>
+      Perseverance came from a campaign I launched while working on the{' '}
+      <a href="https://nhash.com/" target="_blank" rel="noopener noreferrer" className="text-green-600 underline hover:text-blue-600">
+        NHASH site
+      </a>
+      . After mocking up 30 websites in 30 days and receiving zero immediate leads, I moved on. Six months later, Karen King reached out for a redesign. That cold campaign ultimately led to a great partnership and a high-performing, SEO-optimized site.
+    </>,
     ],
   },
+  // {
+  //   title: 'Action King',
+  //   subtitle: 'Performance & SEO Discovery',
+  //   url: 'https://actionkingservices.com',
+  //   paragraphs: [
+  //     'Web development often involves discovery—and always perseverance. While building Action King Services\' new site, I discovered that some hosting providers inject scripts for "performance monitoring" that ironically degrade site speed. By implementing a strong Content Security Policy (CSP), I caught and addressed these issues, improving performance metrics and SEO.',
+  //     'Perseverance came from a campaign I launched while working on the NHASH site. After mocking up 30 websites in 30 days and receiving zero immediate leads, I moved on. Six months later, Karen King reached out for a redesign. That cold campaign ultimately led to a great partnership and a high-performing, SEO-optimized site.',
+  //   ],
+  // },
   {
     title: 'Dr. Neal',
     subtitle: 'Modernization & Migration',
