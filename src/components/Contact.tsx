@@ -39,7 +39,7 @@ export default function Contact() {
                   id="name"
                   placeholder="Your Name"
                   required
-                  className="w-full text-gray-800 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                  className="w-full text-gray-900 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent placeholder:italic placeholder:text-gray-600"
                 />
               </div>
               <div>
@@ -49,7 +49,7 @@ export default function Contact() {
                   id="email"
                   placeholder="Your Email"
                   required
-                  className="w-full text-gray-800 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                  className="w-full text-gray-800 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent placeholder:italic placeholder:text-gray-600"
                 />
               </div>
             </div>
@@ -60,11 +60,8 @@ export default function Contact() {
                 name="subject"   
                 id="website"
                 placeholder="Your Current Website (if applicable) e.g. mywebsite.com or https://mywebsite.com"
-                className="w-full text-gray-800 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent peer"
+                className="w-full text-gray-800 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent placeholder:italic placeholder:text-gray-600"
               />
-              <p className="mt-1 text-sm text-gray-500 hidden peer-invalid:block">
-                Please enter a website with an extension like .com, .net, .org (or leave blank)
-              </p>
             </div>
 
             <div className="mt-6">
@@ -74,7 +71,7 @@ export default function Contact() {
                 rows={6}
                 placeholder="What do you want to improve about your current website? What are your goals for this project? What is your timeline? The more details you can provide, the better I can understand your needs and how I can help."
                 required
-                className="w-full text-gray-800 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent resize-none"
+                className="w-full text-gray-800 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent resize-none placeholder:italic placeholder:text-gray-600"
               />
             </div>
 
