@@ -7,7 +7,7 @@ export default function Contact() {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900">Contact</h2>
-          <p className="mt-4 text-2xl text-gray-700">Let&apos;s Chat About Your Project</p>
+          <p className="mt-4 text-2xl text-gray-700">Tell Me About Your Project</p>
 
           <div className="mt-8">
             <a
@@ -26,7 +26,7 @@ export default function Contact() {
             method="POST"
             className="bg-white rounded-xl shadow-xl p-8 md:p-12"
           >
-            <input type="hidden" name="access_key" value="ad71182f-cfc7-420c-88bd-994cf1b3d162" />
+            <input type="hidden" name="access_key" value="e283c2e0-86d0-4a67-a6a3-6c121470d3be" />
             <input type="hidden" name="from_name" value="New inquiry from richhudson.net" />
             <input type="hidden" name="redirect" value="https://richhudson.net/thank-you" />
             <input type="checkbox" name="botcheck" className="hidden" />
@@ -57,12 +57,14 @@ export default function Contact() {
             <div className="mt-6">
               <input
                 type="text"
-                name="subject"
-                id="subject"
-                placeholder="Subject"
-                required
-                className="w-full text-gray-800 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent"
+                name="subject"   
+                id="website"
+                placeholder="Your Current Website (if applicable) e.g. mywebsite.com or https://mywebsite.com"
+                className="w-full text-gray-800 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent peer"
               />
+              <p className="mt-1 text-sm text-gray-500 hidden peer-invalid:block">
+                Please enter a website with an extension like .com, .net, .org (or leave blank)
+              </p>
             </div>
 
             <div className="mt-6">
@@ -70,7 +72,7 @@ export default function Contact() {
                 name="message"
                 id="message"
                 rows={6}
-                placeholder="Message"
+                placeholder="What do you want to improve about your current website? What are your goals for this project? What is your timeline? The more details you can provide, the better I can understand your needs and how I can help."
                 required
                 className="w-full text-gray-800 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent resize-none"
               />
