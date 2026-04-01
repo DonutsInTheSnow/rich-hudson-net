@@ -10,12 +10,6 @@ export default function AboutPage() {
           <p className="mt-4 text-xl text-gray-600">Web Developer • Wolfeboro, New Hampshire</p>
         </div>
 
-        <div className="className max-w-3xl mx-auto text-center mb-12 text-xl text-gray-700">
-          <p>
-            <strong>Proud American. Believer in merit, hard work, and individual responsibility.</strong>
-          </p>
-        </div>
-
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
           <div className="relative h-96 md:h-full min-h-96 rounded-xl overflow-hidden shadow-2xl">
             <Image src="/assets/img/about.webp" alt="Rich Hudson on Mars" fill className="object-contain p-5" />
@@ -23,7 +17,7 @@ export default function AboutPage() {
 
           <div className="text-xl max-w-none text-gray-700 space-y-6">
             <p>
-                I was born in Huntsville, Alabama—son of an Apollo-era rocket scientist who helped beat the Soviets to the moon. We moved north when I was young. My parents loved New Hampshire&apos;s lakes and independent spirit. They built a home in Wolfeboro for retirement. Life took detours—ten years ago my wife and I made it our own after traveling the country. We&apos;ve seen all 50 states... and the Live Free or <span className="line-through decoration-red-600 decoration-2">Die</span> <span className="font-bold">Fight</span> state is still #1.
+                Born in Huntsville, Alabama. Son of an Apollo-era rocket scientist who helped beat the Soviets to the moon. We moved north when I was young. My parents loved New Hampshire&apos;s lakes and independent spirit. They built a home in Wolfeboro for retirement. Life took detours—ten years ago my wife and I made it our own after traveling the country. We&apos;ve seen all 50 states... and the Live Free or <span className="line-through decoration-red-600 decoration-2">Die</span> <span className="font-bold">Fight</span> state is still #1.
             </p>
 
             <p>
@@ -43,7 +37,7 @@ export default function AboutPage() {
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Shedooby</h3>
               <p className="text-gray-700">
-                An iOS app I created to help people break bad habits and stay off social media for 8 weeks. Track progress, redirect mind chatter, and focus on high-value goals.
+                An iOS app I created that helps people place the proper value on their time by challenging them to break bad habits, stay off social media and dedicate themselves to achieving three mission goals over 8 weeks. Track progress, redirect mind chatter, and build discipline like a soldier with Shedooby.
               </p>
               <a href="https://apps.apple.com/us/app/shedooby/id6748308602" target="_blank" rel="noopener" className="mt-4 inline-block text-green-600 font-semibold underline hover:text-blue-600">
                 Get Shedooby in the App Store →

@@ -138,7 +138,7 @@ export default function Services() {
 
         <div className="mt-16">
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            <strong>Specializing in</strong> lean, high-performance solutions. Prioritizing clean HTML/CSS/JS for speed, SEO, and simplicity. For e-commerce, Shopify (with custom app experience) to deliver straightforward online sales for local businesses.
+            <strong>Specializing in</strong> lean, high-performance solutions. Prioritizing clean HTML/CSS/JS for speed, SEO, and simplicity.
           </p>
 
           <p className="mt-8 text-xl max-w-3xl mx-auto font-semibold text-gray-700">
