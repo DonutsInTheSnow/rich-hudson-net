@@ -102,7 +102,7 @@ export default function Services() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900">Services</h2>
           <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
-            Lightweight, high-performance websites tailored to your needs — using only the minimal tech stack required for speed, clean code, and strong search rankings. No unnecessary frameworks or bloat. Proven results: mobile scores jumping from the 50s to 90s.
+            I help busy, non-tech-savvy local business owners in Wolfeboro and the Lakes Region get a reliable website that works — without the stress or high costs. Whether you need a new fast-loading site, a complete overhaul of an outdated one, malware cleanup and repair, or simple ongoing updates and maintenance, I handle everything for you. I build lightweight, high-performance websites using the lightest tech stack needed for speed and great search rankings. When it makes sense for your budget, I can also upgrade or rebuild WordPress sites cleanly and securely. My focus is simple: deliver results you can afford and easily manage.
           </p>
         </div>
 

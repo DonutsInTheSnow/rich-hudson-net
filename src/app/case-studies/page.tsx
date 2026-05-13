@@ -31,30 +31,6 @@ const cases = [
     ],
   },
   {
-    title: 'Action King',
-    subtitle: 'Performance & SEO Discovery',
-    url: 'https://actionkingservices.com',
-    paragraphs: [
-      'Web development often involves discovery—and always perseverance. While building Action King Services\' new site, I discovered that some hosting providers inject scripts for "performance monitoring" that ironically degrade site speed. By implementing a strong Content Security Policy (CSP), I caught and addressed these issues, improving performance metrics and SEO.',
-    <>
-      Perseverance came from a campaign I launched while working on the{' '}
-      <a href="https://nhash.com/" target="_blank" rel="noopener noreferrer" className="text-green-600 underline hover:text-blue-600">
-        NHASH site
-      </a>
-      . After mocking up 30 websites in 30 days and receiving zero immediate leads, I moved on. Six months later, Karen King reached out for a redesign. That cold campaign ultimately led to a great partnership and a high-performing, SEO-optimized site.
-    </>,
-    ],
-  },
-  // {
-  //   title: 'Action King',
-  //   subtitle: 'Performance & SEO Discovery',
-  //   url: 'https://actionkingservices.com',
-  //   paragraphs: [
-  //     'Web development often involves discovery—and always perseverance. While building Action King Services\' new site, I discovered that some hosting providers inject scripts for "performance monitoring" that ironically degrade site speed. By implementing a strong Content Security Policy (CSP), I caught and addressed these issues, improving performance metrics and SEO.',
-  //     'Perseverance came from a campaign I launched while working on the NHASH site. After mocking up 30 websites in 30 days and receiving zero immediate leads, I moved on. Six months later, Karen King reached out for a redesign. That cold campaign ultimately led to a great partnership and a high-performing, SEO-optimized site.',
-  //   ],
-  // },
-  {
     title: 'Dr. Neal',
     subtitle: 'Modernization & Migration',
     url: 'https://drrichardneal.com/',
