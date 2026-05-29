@@ -2,6 +2,21 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid';
 
 const cases = [
   {
+    title: 'Sunday Paving & Sealing',
+    subtitle: 'Enhanced Performance for SEO',
+    url: 'https://sundaypaving.com/',
+    paragraphs: [
+      'Ryan wanted a faster, cleaner website to improve local search rankings and provide a better experience for customers in the Lakes Region.',
+      'The original site was a heavy single-page application built on Bootstrap with multiple jQuery libraries, resulting in slow load times and poor mobile performance.',
+      'We made significant improvements:',
+      '• Moved the Gallery and Employment sections to their own dedicated pages to declutter and streamline the main landing page.',
+      '• Removed heavy dependencies (jQuery, Isotope, Venobox, Owl Carousel, AOS, etc.) and rebuilt using vanilla HTML, CSS, and JavaScript.',
+      '• Optimized with critical CSS, local fonts, WebP images, and modern best practices.',
+      'Result: Mobile PageSpeed score jumped from the low 60s to 96+, with strong Core Web Vitals. The lighter landing page now loads much faster and ranks better for local asphalt paving and sealcoating searches.',
+      'This project shows the value of moving away from bloated SPA templates and focusing on speed and simplicity for local service businesses.'
+    ],
+  },
+  {
     title: 'DJ\'s Septic Pumping Service, Inc.',
     subtitle: 'Local SEO & Performance',
     url: 'https://djssepticpumping.com/',
