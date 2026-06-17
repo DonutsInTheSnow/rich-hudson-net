@@ -28,7 +28,7 @@ export default function Hero() {
 
           {/* Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-8">
-            Fast, No-BS Websites To Grow Your Business 
+            Website Handyman for Local NH Businesses 
           </h1>
 
           {/* CTAs */}
