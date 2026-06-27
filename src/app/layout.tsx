@@ -19,11 +19,23 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Rich Hudson - Web Developer",
+    default: "Rich Hudson - Website Handyman | New Hampshire",
     template: "%s | Rich Hudson",
   },
-  description: "Fast, modern websites for New Hampshire businesses. Built and supported locally in Wolfeboro.",
-  keywords: ["web developer", "Wolfeboro NH", "Next.js developer", "performance websites", "local web design"],
+  description: "Local Website Handyman in Wolfeboro, NH. I modernize outdated Wix, Squarespace, and WordPress sites and build fast, custom websites with Next.js, Tailwind, Bootstrap, and more. Reliable support for New Hampshire small businesses.",
+  keywords: [
+    "website handyman",
+    "web developer Wolfeboro NH",
+    "New Hampshire web design",
+    "Squarespace redesign",
+    "Wix to modern website",
+    "WordPress maintenance",
+    "Next.js developer NH",
+    "small business website upgrade",
+    "local web developer New Hampshire",
+    "website modernization",
+    "custom web development NH",
+  ],
   authors: [{ name: "Rich Hudson" }],
   creator: "Rich Hudson",
 
@@ -32,15 +44,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://richhudson.net",
-    siteName: "Rich Hudson - Web Developer",
-    title: "Rich Hudson - Web Developer",
-    description: "Fast, modern websites for New Hampshire businesses. Built and supported locally in Wolfeboro.",
+    siteName: "Rich Hudson - Website Handyman",
+    title: "Rich Hudson - Website Handyman for New Hampshire Businesses",
+    description: "Local Website Handyman in Wolfeboro, NH. Modernizing Wix, Squarespace, WordPress, and building fast custom sites for small businesses.",
     images: [
       {
         url: "/assets/img/original-gangsta.webp",
         width: 1200,
         height: 630,
-        alt: "Rich Hudson portfolio - high-performance Next.js website",
+        alt: "Rich Hudson - Website Handyman serving New Hampshire businesses",
       },
     ],
   },
@@ -48,10 +60,10 @@ export const metadata: Metadata = {
   // Twitter
   twitter: {
     card: "summary_large_image",
-    title: "Rich Hudson - Web Developer",
-    description: "Fast, modern websites for New Hampshire businesses. Built and supported locally in Wolfeboro.",
+    title: "Rich Hudson - Website Handyman | Wolfeboro NH",
+    description: "Modernizing outdated websites and building new ones for New Hampshire small businesses. Wix, Squarespace, WordPress, Next.js & more.",
     images: ["/assets/img/original-gangsta.webp"],
-    creator: "@rhudson4966", // optional - add if you have one
+    creator: "@rhudson4966",
   },
 
   // Favicon & Icons
