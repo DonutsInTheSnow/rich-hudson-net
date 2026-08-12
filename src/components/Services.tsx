@@ -66,7 +66,7 @@ export default function Services() {
       title: 'NHASH',
       category: 'Professional Trade Association',
       description:
-        'An information-rich website for New Hampshire Association of Setpage Haulers.',
+        'An information-rich website for New Hampshire Association of Septage Haulers.',
       image: '/assets/img/portfolio/nhash.webp',
       url: 'https://nhash.com/',
     },
