@@ -1,22 +1,23 @@
+
 // components/Services.tsx
 'use client';
 
-import { CheckIcon } from '@heroicons/react/24/solid';
+import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
-import Link from 'next/link';
+// import Link from 'next/link';
 
 const container: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.4,
+      staggerChildren: 0.2,
     },
   },
 };
 
 const cardVariant: Variants = {
-  hidden: { y: 60, opacity: 0 },
+  hidden: { y: 40, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
@@ -27,85 +28,66 @@ const cardVariant: Variants = {
   },
 };
 
-interface Service {
+interface PortfolioItem {
   title: string;
+  category: string;
   description: string;
-  highlights: string[];
+  image: string;
+  url: string;
 }
 
 export default function Services() {
-  const services: Service[] = [
+  const portfolio: PortfolioItem[] = [
     {
-      title: 'Modern Static Websites',
+      title: "Louis' Pizza",
+      category: 'Restaurant',
       description:
-        'Blazing-fast, SEO-optimized static sites built with clean HTML, CSS, and JavaScript. Hosted on GoDaddy for reliable, high-performance delivery.',
-      highlights: [
-        'Mobile-first responsive design',
-        'Excellent Google PageSpeed scores (90-100)',
-        'Clean, maintainable code',
-        'Future-proof architecture',
-      ],
+        'A welcoming, easy-to-use website for a longtime Wolfeboro pizza restaurant.',
+      image: '/assets/img/portfolio/louis-pizza.webp',
+      url: 'https://www.louis-pizza.com/',
     },
     {
-      title: 'Dynamic Full-Stack Applications',
+      title: "DJ's Septic Pumping",
+      category: 'Local Service Business',
       description:
-        'Custom web apps with server-side functionality using Node.js, Express, MongoDB, and Cloudinary for image management.',
-      highlights: [
-        'User authentication & dashboards',
-        'Content management & admin tools',
-        'Secure and scalable',
-        'Modern React/Next.js stacks when the project calls for it',
-      ],
+        'A straightforward website designed to help local customers quickly find services and contact information.',
+      image: '/assets/img/portfolio/djs-septic.webp',
+      url: 'https://djssepticpumping.com/',
     },
     {
-      title: 'Site Modernization & Performance Upgrades',
+      title: 'Dr. Richard Neal',
+      category: 'Professional Practice',
       description:
-        'Turn outdated or slow websites into fast, modern experiences that rank higher and convert better.',
-      highlights: [
-        'Legacy site migration',
-        'Performance optimization',
-        'SEO improvements (sitemaps, metadata, CSP)',
-        'Accessibility enhancements',
-      ],
+        'A professional website providing patients with clear information about the practice and its services.',
+      image: '/assets/img/portfolio/dr-richard-neal.webp',
+      url: 'https://drrichardneal.com/',
     },
     {
-      title: 'Ongoing Maintenance & Local Support',
+      title: 'NHASH',
+      category: 'Professional Trade Association',
       description:
-        'Reliable updates, fixes, and improvements from someone right here in Wolfeboro — no endless support tickets or overseas teams.',
-      highlights: [
-        'Quick response times',
-        'In-person meetings when needed',
-        'Long-term partnerships',
-        'Peace of mind',
-      ],
+        'An information-rich website for New Hampshire Association of Setpage Haulers.',
+      image: '/assets/img/portfolio/nhash.webp',
+      url: 'https://nhash.com/',
     },
   ];
-
-  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const element = document.getElementById('contact');
-    if (element) {
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-
-      const isMobile = window.innerWidth < 768;
-
-      window.scrollTo({
-        top: elementPosition,
-        behavior: isMobile ? 'auto' :'smooth',
-      });
-    }
-  };
 
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6">
+
+        {/* Section heading */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900">Services</h2>
+          <h2 className="text-4xl font-bold text-gray-900">
+            Websites I&apos;ve Built
+          </h2>
+
           <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
-            I help busy, non-tech-savvy local business owners in Wolfeboro and the Lakes Region get a reliable website that works — without the stress or high costs. Whether you need a new fast-loading site, a complete overhaul of an outdated one, or ongoing updates and maintenance, I can handle it for you. I build lightweight, high-performance websites using the lightest tech stack needed for speed and great search rankings. My focus is simple: deliver results you can afford and easily manage.
+            From mom-and-pop pizza shops and condominium communities to land conservation nonprofits and professional trade associations, I build websites for the people and organizations that make our local communities work.
           </p>
         </div>
 
+        {/* Portfolio cards */}
         <motion.div
           className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto"
           variants={container}
@@ -113,45 +95,67 @@ export default function Services() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {services.map((service, i) => (
+          {portfolio.map((project) => (
             <motion.div
-              key={i}
+              key={project.title}
               variants={cardVariant}
-              className="bg-gray-50 rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"
+              className="bg-gray-50 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
             >
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                {service.title}
-              </h3>
-              <p className="text-gray-700 mb-6">{service.description}</p>
+              {/* Screenshot */}
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Visit ${project.title} website`}
+              >
+                <div className="relative aspect-16/10 overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} website`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover object-top transition-transform duration-300 hover:scale-[1.02]"
+                  />
+                </div>
+              </a>
 
-              <ul className="space-y-3">
-                {service.highlights.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <CheckIcon className="h-6 w-6 text-green-600 shrink-0 mt-0.5" />
-                    <span className="text-gray-700 font-mono">{item}</span>
-                  </li>
-                ))}
-              </ul>
+              {/* Card content */}
+              <div className="p-7">
+                <p className="text-sm font-semibold uppercase tracking-wide text-green-600 mb-2">
+                  {project.category}
+                </p>
+
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  {project.title}
+                </h3>
+
+                <p className="text-gray-700 mb-5">
+                  {project.description}
+                </p>
+
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-semibold text-green-600 hover:text-blue-600 transition-colors"
+                >
+                  View Website →
+                </a>
+              </div>
             </motion.div>
           ))}
         </motion.div>
 
-        <div className="mt-16">
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            <strong>Specializing in</strong> lean, high-performance solutions. Prioritizing clean HTML/CSS/JS for speed, SEO, and simplicity.
-          </p>
+        {/* Portfolio CTA */}
+        {/* <div className="mt-14 text-center">
+          <Link
+            href="/portfolio"
+            className="text-lg font-semibold text-gray-700 underline hover:text-green-600 transition-colors"
+          >
+            See more of my work →
+          </Link>
+        </div> */}
 
-          <p className="mt-8 text-xl max-w-3xl mx-auto font-semibold text-gray-700">
-            Ready for a site that loads fast, ranks well, and reflects your business? I can offer you web options that fit your business and your budget. {' '}
-            <Link
-              href="/#contact"
-              onClick={handleContactClick}
-              className="text-green-600 underline hover:text-blue-600 font-bold cursor-pointer"
-            >
-              Let&apos;s talk.
-            </Link>
-          </p>
-        </div>
       </div>
     </section>
   );

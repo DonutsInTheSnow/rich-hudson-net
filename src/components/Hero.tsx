@@ -27,9 +27,13 @@ export default function Hero() {
           </span>
 
           {/* Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white mb-8">
-            Website Handyman for Local NH Businesses 
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white mb-8">
+            Web Design for Local Businesses in Wolfeboro & the Lakes Region 
           </h1>
+          {/* Subheadline */}
+          <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-amber-500 mb-12">
+            Your Local Website Handyman
+          </p>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
