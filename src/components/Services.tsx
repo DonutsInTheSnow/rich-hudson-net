@@ -4,7 +4,7 @@
 
 import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
-// import Link from 'next/link';
+import Link from 'next/link';
 
 const container: Variants = {
   hidden: { opacity: 0 },
@@ -78,12 +78,23 @@ export default function Services() {
 
         {/* Section heading */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900">
+          <p className="text-2xl font-semibold text-gray-800 max-w-3xl mx-auto">
+            For your business, I choose the lightest effective tools.
+          </p>
+
+          <p className="mt-3 text-lg text-amber-700 font-mono">
+            (Speed and results first =&gt; Complexity only when truly justified.)
+          </p>
+
+          <h2 className="mt-10 text-4xl font-bold text-gray-900">
             Websites I&apos;ve Built
           </h2>
 
           <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
-            From mom-and-pop pizza shops and condominium communities to land conservation nonprofits and professional trade associations, I build websites for the people and organizations that make our local communities work.
+            From mom-and-pop pizza shops and condominium communities to land
+            conservation nonprofits and professional trade associations, I build
+            websites for the people and organizations that make our local
+            communities work.
           </p>
         </div>
 
@@ -147,14 +158,14 @@ export default function Services() {
         </motion.div>
 
         {/* Portfolio CTA */}
-        {/* <div className="mt-14 text-center">
+        <div className="mt-14 text-center">
           <Link
             href="/portfolio"
             className="text-lg font-semibold text-gray-700 underline hover:text-green-600 transition-colors"
           >
             See more of my work →
           </Link>
-        </div> */}
+        </div>
 
       </div>
     </section>

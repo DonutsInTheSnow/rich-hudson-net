@@ -46,10 +46,10 @@ export default function Hero() {
             </a>
 
             <a
-              href="/site-specs"
+              href="/portfolio"
               className="inline-flex items-center px-10 py-5 bg-white/20 backdrop-blur-md text-white text-lg font-semibold rounded-full border border-white/30 hover:bg-white/30 transition-all duration-300"
             >
-              View Site Specs
+              View Portfolio
             </a>
           </div>
         </div>
