@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo Site | Fast Static Template</title>
+  <style>
+    /* ========== RESET & BASE ========== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #0a0a0a;
+      --text: #ffffff;
+      --text-muted: #b0b0b0;
+      --accent: #ffffff;
+      --header-bg: rgba(10, 10, 10, 0.92);
+      --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* ========== HEADER ========== */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 1.25rem 0;
+      transition: background var(--transition), backdrop-filter var(--transition), padding var(--transition);
+    }
+
+    .header.scrolled {
+      background: var(--header-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 0.9rem 0;
+      box-shadow: 0 1px 0 rgba(255,255,255,0.06);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      z-index: 1001;
+    }
+
+    .nav-desktop {
+      display: none;
+      align-items: center;
+      gap: 2.25rem;
+    }
+
+    .nav-desktop a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      opacity: 0.9;
+      transition: opacity 0.2s;
+    }
+
+    .nav-desktop a:hover {
+      opacity: 1;
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.55rem 1.25rem;
+      border: 1.5px solid rgba(255,255,255,0.85);
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      transition: background 0.25s, color 0.25s, border-color 0.25s;
+    }
+
+    .btn-outline:hover {
+      background: #fff;
+      color: #000;
+      border-color: #fff;
+    }
+
+    /* ========== HAMBURGER ========== */
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 28px;
+      height: 28px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1001;
+      padding: 0;
+      position: relative;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 30px;
+      height: 2px;
+      background: #fff;
+      border-radius: 1px;
+      transition: transform var(--transition), opacity var(--transition), width var(--transition);
+      position: absolute;
+    }
+
+    .hamburger span:nth-child(1) { transform: translateY(-4px); }
+    .hamburger span:nth-child(2) { transform: translateY(4px); }
+    .hamburger.open span:nth-child(1) { transform: translateY(0) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { transform: translateY(0) rotate(-45deg); }
+
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      background: rgba(8, 8, 8, 0.97);
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+
+    .mobile-menu.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-menu nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.75rem;
+    }
+
+    .mobile-menu a {
+      font-size: 1.75rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .mobile-menu.open a {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .mobile-menu.open a:nth-child(1) { transition-delay: 0.08s; }
+    .mobile-menu.open a:nth-child(2) { transition-delay: 0.14s; }
+    .mobile-menu.open a:nth-child(3) { transition-delay: 0.20s; }
+    .mobile-menu.open a:nth-child(4) { transition-delay: 0.26s; }
+
+    .mobile-menu .btn-outline {
+      margin-top: 1.5rem;
+      font-size: 1rem;
+      padding: 0.75rem 1.75rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.4s ease, transform 0.4s ease, background 0.25s, color 0.25s;
+    }
+
+    .mobile-menu.open .btn-outline {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 0.32s;
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      padding: 0 1.5rem 5rem;
+      background: #111;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/template-hero.webp');
+      background-size: cover;
+      background-position: center 30%;
+      filter: brightness(0.72);
+    }
+
+    .hero-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.75) 0%,
+        rgba(0,0,0,0.25) 45%,
+        rgba(0,0,0,0.15) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      font-weight: 800;
+      font-stretch: condensed;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      max-width: 14ch;
+    }
+
+    /* ========== SECTIONS ========== */
+    section {
+      padding: 5rem 1.5rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    h2 {
+      font-size: clamp(1.9rem, 4vw, 2.75rem);
+      font-weight: 800;
+      font-stretch: condensed;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+
+    p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 58ch;
+    }
+
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .about-image {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      border-radius: 7px;
+    }
+
+    .quote {
+      margin: 2rem 0 0;
+      padding: 1.5rem 0 1.5rem 1.5rem;
+      border-left: 3px solid #b69963;
+      max-width: 42rem;
+    }
+
+    .quote p {
+      color: #e8e4de;
+      font-size: 1.2rem;
+      font-style: italic;
+      line-height: 1.45;
+      max-width: none;
+    }
+
+    .quote cite {
+      display: block;
+      margin-top: 0.9rem;
+      font-style: normal;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      color: #b0b0b0;
+      text-transform: none;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      margin-top: 3.5rem;
+    }
+
+    .feature-image {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      margin-bottom: 1.15rem;
+      border-radius: 7px;
+    }
+
+    .feature {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .feature h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .cta-band {
+      background: linear-gradient(90deg, #b69963, #938686, #8f9c80);
+      text-align: center;
+      padding: 5rem 1.5rem;
+    }
+
+    .cta-band h2 { margin-bottom: 1rem; }
+
+    .cta-band p {
+      margin: 0 auto 2rem;
+      color: #eae5e5;
+    }
+
+    .btn-solid {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.9rem 2rem;
+      background: #fff;
+      color: #000;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: 999px;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .btn-solid:hover {
+      transform: translateY(-2px);
+      opacity: 0.92;
+    }
+
+    /* ========== CONTACT ========== */
+    .contact-section {
+      background: #fff;
+      color: #111;
+      padding: 6rem 1.5rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .contact-text h2 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 800;
+      font-stretch: condensed;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      color: #111;
+      margin-bottom: 1.5rem;
+      line-height: 1.05;
+    }
+
+    .contact-text p {
+      color: #333;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 42ch;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .form-group label {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #111;
+    }
+
+    .form-group label span {
+      color: #666;
+      font-weight: 400;
+      font-size: 0.85rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem 0.9rem;
+      border: 1.5px solid #999;
+      border-radius: 0;
+      font-size: 1rem;
+      font-family: inherit;
+      background: #fff;
+      color: #111;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #555;
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .btn-submit {
+      align-self: flex-start;
+      padding: 0.7rem 2.2rem;
+      border: 1.5px solid #111;
+      border-radius: 999px;
+      background: transparent;
+      color: #111;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.25s, color 0.25s;
+    }
+
+    .btn-submit:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    /* ========== FOOTER ========== */
+    .site-footer {
+      background: #000;
+      color: #fff;
+      padding: 4rem 1.5rem 3rem;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .footer-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+
+    .footer-col h3 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      font-stretch: condensed;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-contact p {
+      color: #ccc;
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+      max-width: none;
+    }
+
+    .footer-brand { text-align: left; }
+
+    .footer-logo {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .social-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .social-links a {
+      display: flex;
+      color: #fff;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+    }
+
+    .social-links a:hover { opacity: 1; }
+
+    @media (min-width: 640px) {
+      .form-row { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (min-width: 768px) {
+      .hamburger { display: none; }
+      .nav-desktop { display: flex; }
+
+      .about-layout {
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 3rem;
+      }
+
+      .features {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+
+      .hero { padding-bottom: 6.5rem; }
+
+      .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: start;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+
+      .footer-brand { text-align: right; }
+      .social-links { justify-content: flex-end; }
+    }
+
+    @media (min-width: 1024px) {
+      .header-inner { padding: 0 2rem; }
+    }
+
+    body.menu-open { overflow: hidden; }
+  </style>
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#" class="logo">Local Wolfe</a>
+
+      <nav class="nav-desktop">
+        <a href="#about">About</a>
+        <a href="#approach">Approach</a>
+        <a href="#offer">Offer</a>
+        <a href="#contact" class="btn-outline">Get Started</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#approach">Approach</a>
+      <a href="#offer">Offer</a>
+      <a href="#contact" class="btn-outline">Get Started</a>
+    </nav>
+  </div>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1>Let me save you time.</h1>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container about-layout">
+      <div>
+        <p class="section-label">About</p>
+        <h2>A simple site that works for a local business.</h2>
+        <p>
+          Clean design, fast loading, and built to convert. This is the style and speed of the $399 special sites — fully static, no page-builder bloat, owned by you.
+        </p>
+      </div>
+      <img
+        class="about-image"
+        src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
+        alt="Bright workspace placeholder">
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="container">
+      <p class="section-label">Why this approach</p>
+      <h2>Simple. Fast. Yours.</h2>
+
+      <blockquote class="quote">
+        <p>“Because it's finite, there's nothing more valuable than your time. My job is to help you get the most out of yours.”</p>
+        <cite>— Rich Hudson, Website Strategy &amp; UX/UI Design</cite>
+      </blockquote>
+
+      <div class="features">
+        <div class="feature">
+          <img class="feature-image" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=800&q=80" alt="Fast work placeholder">
+          <h3>Lightning fast</h3>
+          <p>Vanilla HTML, CSS &amp; JS. No heavy frameworks or tracking scripts slowing things down.</p>
+        </div>
+        <div class="feature">
+          <img class="feature-image" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&h=800&q=80" alt="Focused planning placeholder">
+          <h3>One revision included</h3>
+          <p>Clear scope keeps the process quick and the price low. Extra changes billed hourly.</p>
+        </div>
+        <div class="feature">
+          <img class="feature-image" src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&h=800&q=80" alt="Own your files placeholder">
+          <h3>You own everything</h3>
+          <p>Real files on GoDaddy (or your host). No platform lock-in. Easy to update later.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" id="offer">
+    <div class="container">
+      <h2>Ready for your own site?</h2>
+      <p>First five Wolfeboro and Lakes Region businesses this week get the $399 special.</p>
+      <a href="#contact" class="btn-solid">Claim Your Spot</a>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="contact-grid">
+      <div class="contact-text">
+        <h2>Get in Touch</h2>
+        <p>
+          Tell me a little about your business. I’ll review what you send and confirm whether one of the five $399 spots is still available.
+        </p>
+      </div>
+
+      <form class="contact-form" action="#" method="post">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name <span>(required)</span></label>
+            <input type="text" name="first_name" required>
+          </div>
+          <div class="form-group">
+            <label>Last Name <span>(required)</span></label>
+            <input type="text" name="last_name" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Email <span>(required)</span></label>
+          <input type="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label>Message <span>(required)</span></label>
+          <textarea name="message" required placeholder="Who you are, what’s happening now, and why someone should contact you."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-col footer-contact">
+        <h3>Contact</h3>
+        <p>email@example.com</p>
+        <p>1+(555)-555-5555</p>
+        <p>Wolfeboro &amp; the Lakes Region</p>
+      </div>
+
+      <div class="footer-col footer-brand">
+        <div class="footer-logo">Local Wolfe</div>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2.5" y="6" width="19" height="12" rx="3"/>
+              <polygon points="10,9 16,12 10,15" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h2.6l.4-3H13v-2c0-.6.4-1 1-1z"/>
+            </svg>
+          </a>
+          <a href="#" aria-label="X">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M18.2 2H21l-6.6 7.5L22 22h-6.8l-4.3-6.3L5.5 22H2.7l7-8L2 2h7l3.9 5.8L18.2 2zm-1.2 18.2h1.9L7.1 3.7H5.1l11.9 16.5z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const body = document.body;
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+      body.classList.toggle('menu-open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        body.classList.remove('menu-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        body.classList.remove('menu-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+</body>
+</html>

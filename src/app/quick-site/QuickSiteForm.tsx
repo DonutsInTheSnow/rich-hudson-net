@@ -270,7 +270,7 @@ export default function QuickSiteForm() {
           {status === 'sending' ? 'Sending…' : 'Submit Quick Site form'}
         </button>
         <p className="mt-4 text-gray-600">
-          I&apos;ll review this and email you to confirm if a $399 spot is still
+          I&apos;ll review this and email you to confirm if a $499 spot is still
           available.
         </p>
         {status === 'ok' && (

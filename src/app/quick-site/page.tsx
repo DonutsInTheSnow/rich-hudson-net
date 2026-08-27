@@ -3,7 +3,7 @@ import QuickSiteForm from './QuickSiteForm';
 export const metadata = {
   title: 'Quick Site Special | Rich Hudson',
   description:
-    '$399 website special for the first five Wolfeboro and Lakes Region businesses this week.',
+    '$499 website special for the first five Wolfeboro and Lakes Region businesses this week.',
 };
 
 export default function QuickSitePage() {
@@ -11,6 +11,7 @@ export default function QuickSitePage() {
     <section className="py-20 border-t-amber-800 border-t-110 bg-gray-50">
       <div className="container mx-auto px-6 max-w-5xl">
         <div className="text-center mb-12">
+          {/* <p className="text-2xl font-semibold text-red-600">The Quick Site Special is now closed. Check back for the next special!</p> */}
           <p className="text-sm font-semibold tracking-widest uppercase text-amber-800 mb-3">
             This week only · First five
           </p>
@@ -18,7 +19,7 @@ export default function QuickSitePage() {
             Quick Site Special
           </h1>
           <p className="mt-4 text-xl text-gray-600">
-            $399 · Wolfeboro &amp; Lakes Region businesses
+            $499 · Wolfeboro &amp; Lakes Region businesses
           </p>
         </div>
 
@@ -32,12 +33,18 @@ export default function QuickSitePage() {
             <strong>What you get:</strong> up to 6 images, a contact form, social
             links, your contact info, a call-to-action section, one revision
             before launch, help with a new domain or pointing an existing one,
-            and setup on your own GoDaddy hosting account.
+            and setup on your own GoDaddy hosting account. <a href="/demo/index.html" className="text-green-600 hover:text-green-700 font-bold hover:underline">See a Quick Site demo.</a>
           </p>
           <p>
             Fill out the form below with the content I need to build it. I&apos;ll
             review what you send and email you to confirm whether one of the
-            five $399 spots is still available.
+            five $499 spots is still available.
+          </p>
+          <p>
+            If I confirm a spot, the $499 is due by PayPal before work starts.
+            One revision is included before launch. If you&apos;re not happy with
+            the first preview and we haven&apos;t launched yet, I&apos;ll refund
+            you in full. After launch, extra changes are hourly.
           </p>
         </div>
 

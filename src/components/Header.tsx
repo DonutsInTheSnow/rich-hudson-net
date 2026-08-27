@@ -8,6 +8,7 @@ import { Bars2Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const navLinks = [
   { name: 'Home', href: '/' },
+  { name: 'Quick Site Special', href: '/quick-site' },
   { name: 'About', href: '/about' },
   { name: 'Blog', href: '/blog' },
   { name: 'Case Studies', href: '/case-studies' },
@@ -79,6 +80,7 @@ export default function Header() {
   // Determine active link: route-based for real pages, scroll-based for Contact on home
   const isActive = (href: string) => {
     if (href === '/') return pathname === '/' && !isContactInView;
+    if (href === '/quick-site') return pathname === '/quick-site';
     if (href === '/about') return pathname === '/about';
     if (href === '/blog') return pathname.startsWith('/blog');
     if (href === '/case-studies') return pathname === '/case-studies';
