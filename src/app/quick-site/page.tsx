@@ -1,7 +1,7 @@
 import QuickSiteForm from './QuickSiteForm';
 
 export const metadata = {
-  title: 'Quick Site Special | Rich Hudson',
+  title: 'Quick Site Special - Offer ends Fri Sept 4 | Rich Hudson',
   description:
     '$499 website special for the first five Wolfeboro and Lakes Region businesses this week.',
 };
@@ -13,7 +13,7 @@ export default function QuickSitePage() {
         <div className="text-center mb-12">
           {/* <p className="text-2xl font-semibold text-red-600">The Quick Site Special is now closed. Check back for the next special!</p> */}
           <p className="text-sm font-semibold tracking-widest uppercase text-amber-800 mb-3">
-            This week only · First five
+            This week only · First five · Aug 28 – Sept 4
           </p>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
             Quick Site Special
