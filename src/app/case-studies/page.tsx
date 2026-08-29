@@ -3,21 +3,46 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid';
 
 const cases = [
   {
-    title: 'Wolfeboro Corinthian Yacht Club (WCYC)',
-    subtitle: 'Modernization Concept & Technical Proposal',
-    url: '', 
-    liveMockupUrl: 'https://wcyc-website.vercel.app/',
-    currentSiteUrl: 'https://www.wcycnh.com/',
+    title: 'Lakes Region Repeater Association',
+    subtitle: 'Website Strategy, Information Architecture & WordPress Prototype',
+    url: '',
+    liveMockupUrl: 'https://affirmative-goldfinch-7afa5f.instawp.site/',
+    currentSiteUrl: 'https://www.w1bst.org/',
     paragraphs: [
-      'The Wolfeboro Corinthian Yacht Club currently runs on an outdated Wix site with a tired photo carousel and dated design. I created this high-performance Next.js + TypeScript + Tailwind mock-up to demonstrate what a modern, clean, and member-friendly website could look like.',
-      
-      'Key improvements in the proposal:',
-      '• Dramatic full-screen hero image that replaces the old carousel — immediately more engaging and contemporary.',
-      '• Clean, modern layout with improved navigation and mobile experience.',
-      '• Integrated their actual Events calendar for better usability.',
-      '• Built Supabase authentication for secure member login (user accounts and passwords).',
-      
-      'While the club has a strong membership and waiting list (so broad SEO/public growth isn’t a priority), the faster, more responsive experience benefits existing members and makes admin tasks smoother. This project shows how I can modernize legacy platforms with targeted, high-impact changes rather than a full rebuild.'
+      'The Lakes Region Repeater Association (LRRA) has a wealth of information about amateur radio, its repeater network, club activities, education, emergency communications, and its 50-year history. But the organization\'s existing WordPress site presents much of that information at once, creating a busy homepage and a navigation structure with dozens of links that can make it difficult for visitors to quickly understand what LRRA is and where to go.',
+
+      'I built a WordPress prototype focused on simplifying the visitor experience without discarding the organization\'s existing content. The goal was to create a clearer path for both newcomers interested in amateur radio and existing members looking for club news, events, repeaters, and resources.',
+
+      'Key improvements in the prototype:',
+      '• Simplified information architecture: consolidated the existing navigation into a small number of primary sections, with deeper amateur-radio resources organized into logical categories.',
+      '• Lower-noise homepage: replaced the current stream of announcements, images, articles, and miscellaneous links with a focused landing page that introduces LRRA, explains why someone might join, and directs visitors toward the information they need.',
+      '• New-member focus: prominent messaging and calls to action introduce amateur radio, license testing, the LRRA community, and opportunities to participate.',
+      '• Content strategy: moved secondary and reference material away from the homepage while retaining it as accessible, organized content within the site.',
+      '• Current information without clutter: a streamlined Latest News section gives the homepage a sense of activity while allowing individual posts to carry the organization\'s ongoing announcements and articles.',
+      '• Responsive WordPress design: built with the WordPress block editor and GeneratePress, with particular attention to mobile presentation and a clean, modern visual treatment.',
+
+      'This project demonstrates my approach to nonprofit and community organizations with content-heavy websites: preserve the value of what they have, but reorganize it around the visitor\'s needs. The prototype gives LRRA a concrete design and information-architecture direction to evaluate before committing to a full website redesign.'
+    ],
+  },
+  {
+    title: 'Wolfeboro Lions Club',
+    subtitle: 'Website Strategy, UX Redesign & Wix Prototype',
+    url: '',
+    liveMockupUrl: 'https://rhudson4966.wixsite.com/lions-club-of-wolfeb',
+    currentSiteUrl: 'https://wolfeborolionsclub.wixsite.com/wolfeboro-lions-club',
+    paragraphs: [
+      'The Wolfeboro Lions Club\'s current Wix site is functional but unfocused. A free-plan banner, oversized sponsor logos at the top of every page, and generic service-club language make it hard for visitors to immediately understand who the local club is, what it does in Wolfeboro, or how to join, volunteer, or donate. High-profile fundraisers such as the Great Smith River Race, the Car Show at The Nick, and the Golf Outing are under-connected to the club’s identity.',
+
+      'I built a Wix homepage prototype and two-phase proposal to reorganize the site around three questions: Who are the Wolfeboro Lions? How do they help neighbors here? How can I get involved or support the work?',
+
+      'Key improvements in the prototype and proposal:',
+      '• Clearer visual hierarchy: club identity and local mission first, then impact, events, and ways to help — instead of leading with a sponsor carousel.',
+      '• Local-first messaging and a service-focused hero, with Platinum sponsors moved below the hero and fuller recognition planned for a dedicated Donors page.',
+      '• Simplified navigation plus a persistent Donate button (initially linked to PayPal) to support membership, volunteering, and giving.',
+      '• Content strategy that ties signature community events back to the club and the local programs those events fund.',
+      '• A phased plan: Phase 1 is a clean, mobile-friendly static rebuild in Wix; Phase 2 adds event registration, payments, a small shop, lead capture, calendar, and stronger SEO.',
+
+      'This project shows how I approach nonprofit and community-club work: strategy and information architecture first, then a focused prototype that the organization can evaluate before investing in a full rollout.'
     ],
   },
   {
