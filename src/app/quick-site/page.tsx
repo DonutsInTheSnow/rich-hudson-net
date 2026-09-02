@@ -12,6 +12,7 @@ export default function QuickSitePage() {
       <div className="container mx-auto px-6 max-w-5xl">
         <div className="text-center mb-12">
           {/* <p className="text-2xl font-semibold text-red-600">The Quick Site Special is now closed. Check back for the next special!</p> */}
+          <p className="text-2xl font-semibold text-red-600">There are 2 spots left! It is Wed Sep 2.</p>
           <p className="text-sm font-semibold tracking-widest uppercase text-amber-800 mb-3">
             This week only · First five · Aug 28 – Sept 4
           </p>
