@@ -111,15 +111,17 @@ const cases = [
 
 export default function CaseStudiesPage() {
   return (
-    <section className="py-20 border-t-amber-800 border-t-110 bg-gray-50 text-gray-800">
-      <div className="container mx-auto px-6">
+    // <section className="w-full py-20 border-t-amber-800 border-t-110 bg-gray-50 text-gray-800">
+    <section className="w-screen max-w-[100vw] overflow-x-hidden py-20 border-t-amber-800 border-t-110 bg-gray-50 text-gray-800">
+      {/* <div className="container mx-auto px-6"> */}
+      <div className="mx-auto w-full max-w-6xl px-6">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900">Case Studies</h1>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-12">
           {/* Process Sidebar */}
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-4 min-w-0">
             <h3 className="text-2xl font-bold text-gray-600 mb-6">My Approach</h3>
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h4 className="text-xl font-semibold mb-4 text-gray-800">Let&apos;s talk about what your site could be.</h4>
@@ -133,7 +135,7 @@ export default function CaseStudiesPage() {
           </div>
 
           {/* Timeline Projects */}
-          <div className="lg:col-span-8">
+          <div className="lg:col-span-8 min-w-0">
             <h3 className="text-2xl font-bold text-gray-600 mb-6">Selected Case Studies</h3>
             <div className="relative pl-8 lg:pl-12 border-l-2 border-green-600">
               {cases.map((c, i) => (
@@ -171,7 +173,6 @@ export default function CaseStudiesPage() {
                       </p>
                     ))}
 
-                    {/* Extra Links for WCYC */}
                     {c.liveMockupUrl && (
                       <p className="mt-6 text-gray-700 font-medium font-mono">
                         Live mock-up:{' '}
