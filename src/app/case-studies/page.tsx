@@ -6,7 +6,7 @@ const cases = [
     title: 'Lakes Region Repeater Association',
     subtitle: 'Website Strategy, Information Architecture & WordPress Prototype',
     url: '',
-    liveMockupUrl: 'https://righteous-warbler-129ff4.instawp.site/',
+    liveMockupUrl: 'https://vivacious-addax-cab5c2.instawp.site/',
     currentSiteUrl: 'https://www.w1bst.org/',
     paragraphs: [
       'The Lakes Region Repeater Association (LRRA) has a wealth of information about amateur radio, its repeater network, club activities, education, emergency communications, and its 50-year history. But the organization\'s existing WordPress site presents much of that information at once, creating a busy homepage and a navigation structure with dozens of links that can make it difficult for visitors to quickly understand what LRRA is and where to go.',
