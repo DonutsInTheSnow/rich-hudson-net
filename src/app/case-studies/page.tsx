@@ -25,27 +25,6 @@ const cases = [
     ],
   },
   {
-    title: 'Wolfeboro Lions Club',
-    subtitle: 'Website Strategy, UX Redesign & Wix Prototype',
-    url: '',
-    liveMockupUrl: 'https://rhudson4966.wixsite.com/lions-club-of-wolfeb',
-    currentSiteUrl: 'https://wolfeborolionsclub.wixsite.com/wolfeboro-lions-club',
-    paragraphs: [
-      'The Wolfeboro Lions Club\'s current Wix site is functional but unfocused. A free-plan banner, oversized sponsor logos at the top of every page, and generic service-club language make it hard for visitors to immediately understand who the local club is, what it does in Wolfeboro, or how to join, volunteer, or donate. High-profile fundraisers such as the Great Smith River Race, the Car Show at The Nick, and the Golf Outing are under-connected to the club’s identity.',
-
-      'I built a Wix homepage prototype and two-phase proposal to reorganize the site around three questions: Who are the Wolfeboro Lions? How do they help neighbors here? How can I get involved or support the work?',
-
-      'Key improvements in the prototype and proposal:',
-      '• Clearer visual hierarchy: club identity and local mission first, then impact, events, and ways to help — instead of leading with a sponsor carousel.',
-      '• Local-first messaging and a service-focused hero, with Platinum sponsors moved below the hero and fuller recognition planned for a dedicated Donors page.',
-      '• Simplified navigation plus a persistent Donate button (initially linked to PayPal) to support membership, volunteering, and giving.',
-      '• Content strategy that ties signature community events back to the club and the local programs those events fund.',
-      '• A phased plan: Phase 1 is a clean, mobile-friendly static rebuild in Wix; Phase 2 adds event registration, payments, a small shop, lead capture, calendar, and stronger SEO.',
-
-      'This project shows how I approach nonprofit and community-club work: strategy and information architecture first, then a focused prototype that the organization can evaluate before investing in a full rollout.'
-    ],
-  },
-  {
     title: 'Sunday Paving & Sealing',
     subtitle: 'Enhanced Performance for SEO',
     url: 'https://sundaypaving.com/',
