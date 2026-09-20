@@ -28,11 +28,11 @@ export default function Hero() {
 
           {/* Headline */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white mb-8">
-            Web Design for Local Businesses in Wolfeboro & the Lakes Region 
+            Clear websites that load fast and are easy to update. 
           </h1>
           {/* Subheadline */}
-          <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-amber-500 mb-12">
-            Your Local Website Handyman
+          <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-amber-400 mb-12">
+            Based in Wolfeboro. Available for hire.
           </p>
 
           {/* CTAs */}

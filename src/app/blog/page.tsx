@@ -32,7 +32,7 @@ export default async function IndexPage() {
     <section id="psi-blog" className="py-20 border-t-amber-800 border-t-110 bg-gray-50 text-gray-800">
       <div className="container max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900">Rich Blog</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900">Rich Blog</h1>
           <p className="text-xl text-gray-600 text-center mt-4 mb-16">
             From Code to Community: Web Insights & New Hampshire
           </p>

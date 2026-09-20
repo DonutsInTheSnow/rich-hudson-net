@@ -86,11 +86,13 @@ export default function Services() {
             (Speed and results first =&gt; Complexity only when truly justified.)
           </p>
 
-          <h2 className="mt-10 text-4xl font-bold text-gray-900">
+          <div className="mx-auto mt-10 h-px w-4/5 max-w-5xl bg-gray-300" />
+
+          <h2 className="mt-10 text-2xl md:text-3xl font-bold text-gray-900">
             Websites I&apos;ve Built
           </h2>
 
-          <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto text-left md:text-center">
             From mom-and-pop pizza shops and condominium communities to land
             conservation nonprofits and professional trade associations, I build
             websites for the people and organizations that make our local

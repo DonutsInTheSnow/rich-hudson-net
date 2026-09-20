@@ -31,7 +31,7 @@ export default async function LatestBlogPost() {
   return (
     <section className="py-20 bg-gray-100">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
+        <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 text-gray-900">
           Latest from Rich Blog
         </h2>
 

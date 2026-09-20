@@ -64,7 +64,7 @@ export default function Testimonials() {
     <section id="testimonials" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900">Testimonials</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">Testimonials</h2>
           <p className="mt-4 text-lg text-gray-600">
             What my clients say.
           </p>

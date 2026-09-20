@@ -250,7 +250,7 @@ export default function PortfolioPage() {
             href="/#contact"
             className="inline-block mt-8 px-7 py-3 rounded-lg bg-green-600 text-white font-semibold hover:bg-green-700 transition-colors"
           >
-            Let&apos;s Connect
+            Contact Me
           </Link>
 
         </div>
