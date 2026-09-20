@@ -1,27 +1,55 @@
 
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid';
 
-const cases = [
+type ProcessStep = {
+  step: string;
+  title: string;
+  body: string;
+};
+
+type CaseStudy = {
+  title: string;
+  subtitle: string;
+  url?: string;
+  liveMockupUrl?: string;
+  currentSiteUrl?: string;
+  processPdfUrl?: string;
+  paragraphs: string[];
+  processHeading?: string;
+  process?: ProcessStep[];
+  statusLabel?: string;
+  statusNote?: string;
+  closing?: string[];
+};
+
+const cases: CaseStudy[] = [
   {
     title: 'Lakes Region Repeater Association',
-    subtitle: 'Website Strategy, Information Architecture & WordPress Prototype',
+    subtitle: 'Website Strategy, UX/UI Design & WordPress Prototype',
     url: '',
     liveMockupUrl: 'https://vivacious-addax-cab5c2.instawp.site/',
     currentSiteUrl: 'https://www.w1bst.org/',
+    processPdfUrl: '/case-studies/lrra-website-discovery.pdf',
     paragraphs: [
-      'The Lakes Region Repeater Association (LRRA) has a wealth of information about amateur radio, its repeater network, club activities, education, emergency communications, and its 50-year history. But the organization\'s existing WordPress site presents much of that information at once, creating a busy homepage and a navigation structure with dozens of links that can make it difficult for visitors to quickly understand what LRRA is and where to go.',
-
-      'I built a WordPress prototype focused on simplifying the visitor experience without discarding the organization\'s existing content. The goal was to create a clearer path for both newcomers interested in amateur radio and existing members looking for club news, events, repeaters, and resources.',
-
-      'Key improvements in the prototype:',
-      '• Simplified information architecture: consolidated the existing navigation into a small number of primary sections, with deeper amateur-radio resources organized into logical categories.',
-      '• Lower-noise homepage: replaced the current stream of announcements, images, articles, and miscellaneous links with a focused landing page that introduces LRRA, explains why someone might join, and directs visitors toward the information they need.',
-      '• New-member focus: prominent messaging and calls to action introduce amateur radio, license testing, the LRRA community, and opportunities to participate.',
-      '• Content strategy: moved secondary and reference material away from the homepage while retaining it as accessible, organized content within the site.',
-      '• Current information without clutter: a streamlined Latest News section gives the homepage a sense of activity while allowing individual posts to carry the organization\'s ongoing announcements and articles.',
-      '• Responsive WordPress design: built with the WordPress block editor and GeneratePress, with particular attention to mobile presentation and a clean, modern visual treatment.',
-
-      'This project demonstrates my approach to nonprofit and community organizations with content-heavy websites: preserve the value of what they have, but reorganize it around the visitor\'s needs. The prototype gives LRRA a concrete design and information-architecture direction to evaluate before committing to a full website redesign.'
+      'The Lakes Region Repeater Association (LRRA) has more than 50 years of history, a large amount of useful amateur-radio information, and an active community. Its existing website contains that information, but the homepage and navigation make it difficult for visitors—particularly newcomers—to quickly understand where to begin.',
+      'I created a working WordPress landing page prototype focused on information architecture, visitor experience, and content organization rather than simply giving the existing site a visual makeover.',
+    ],
+    processHeading: 'Project in Progress',
+    process: [
+      { step: '01', title: 'Discovery & UX Requirements', body: 'Identified primary audiences, visitor goals, content priorities, and problems with the current experience.' },
+      { step: '02', title: 'Content Audit', body: 'Reviewing existing content to determine what should be retained, consolidated, reorganized, or moved.' },
+      { step: '03', title: 'Information Architecture', body: "Developing a simplified sitemap and navigation structure around visitor tasks rather than the organization's existing collection of pages." },
+      { step: '04', title: 'User Flows', body: 'Mapping key journeys such as getting started with amateur radio, finding repeater information, joining LRRA, and finding events.' },
+      { step: '05', title: 'Wireframes', body: 'Creating low-fidelity page layouts in Figma to establish hierarchy, content structure, and navigation before visual styling.' },
+      { step: '06', title: 'UI Design', body: 'Developing the visual system, responsive layouts, components, and interaction patterns in Figma.' },
+      { step: '07', title: 'WordPress Prototype', body: 'Translating the UX/UI direction into a working GeneratePress + WordPress prototype for evaluation.' },
+      { step: '08', title: 'Testing & Iteration', body: 'Testing the experience across desktop and mobile, gathering feedback, and refining the design.' },
+    ],
+    statusLabel: 'Current Status',
+    statusNote: 'The project is currently at the Discovery / Information Architecture / Prototype stage.',
+    closing: [
+      'The prototype focuses on giving visitors a clearer path to understand LRRA, get started with amateur radio, become involved, and find the practical information they need.',
+      'This project is being developed as a proposed redesign and is not yet an LRRA-commissioned website.',
     ],
   },
   {
@@ -36,7 +64,7 @@ const cases = [
       '• Removed heavy dependencies (jQuery, Isotope, Venobox, Owl Carousel, AOS, etc.) and rebuilt using vanilla HTML, CSS, and JavaScript.',
       '• Optimized with critical CSS, local fonts, WebP images, and modern best practices.',
       'Result: Mobile PageSpeed score jumped from the low 60s to 96+, with strong Core Web Vitals. The lighter landing page now loads much faster and ranks better for local asphalt paving and sealcoating searches.',
-      'This project shows the value of moving away from bloated SPA templates and focusing on speed and simplicity for local service businesses.'
+      'This project shows the value of moving away from bloated SPA templates and focusing on speed and simplicity for local service businesses.',
     ],
   },
   {
@@ -53,7 +81,7 @@ const cases = [
       '• Added robots.txt, sitemap.xml, Open Graph meta, CSP.',
       '• Inlined critical CSS, deferred non-critical resources, enabled gzip.',
       'Result: Reduced files to ~34, eliminated render-blocking delays, and boosted mobile Performance to 93, Accessibility to 95, Best Practices & SEO to 100. Faster load times support better rankings and happier visitors in a local service market.',
-      'This project shows why lightweight, modern techniques beat legacy templates for small-business sites.'
+      'This project shows why lightweight, modern techniques beat legacy templates for small-business sites.',
     ],
   },
   {
@@ -64,7 +92,7 @@ const cases = [
       'John found me through a mutual contact and wanted a dynamic project management site for his team (CRUD functionality). He also aimed for strong SEO rankings and ad campaigns, so I connected him with a reliable marketing specialist.',
       'I added Open Graph tags, tracking scripts, sitemap, blog, privacy policy, and form thank-you pages to support SEO and ads. Traffic grew significantly as a result.',
       'He added a hero video — a performance trade-off, but justified by industry data showing ~80% conversion lifts from video.',
-      'Handed off to a Las Vegas agency in mid-2024. Their current mobile PSI is 60. For contrast, my recent vanilla JavaScript renovation of DJ\s is 93.',
+      'Handed off to a Las Vegas agency in mid-2024. Their current mobile PSI is 60. For contrast, my recent vanilla JavaScript renovation of DJ\'s is 93.',
       'These days browsers have excellent built-in tools for things like smooth scrolling, fade-ins, and subtle animations. By using those native features (plain HTML, CSS, and clean JavaScript) instead of older add-on libraries, I can deliver the same great look and feel with far less code and much faster speeds.',
     ],
   },
@@ -90,16 +118,13 @@ const cases = [
 
 export default function CaseStudiesPage() {
   return (
-    // <section className="w-full py-20 border-t-amber-800 border-t-110 bg-gray-50 text-gray-800">
     <section className="w-screen max-w-[100vw] overflow-x-hidden py-20 border-t-amber-800 border-t-110 bg-gray-50 text-gray-800">
-      {/* <div className="container mx-auto px-6"> */}
       <div className="mx-auto w-full max-w-6xl px-6">
         <div className="text-center mb-16">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900">Case Studies</h1>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-12">
-          {/* Process Sidebar */}
           <div className="lg:col-span-4 min-w-0">
             <h3 className="text-2xl font-bold text-gray-600 mb-6">My Approach</h3>
             <div className="bg-white rounded-xl shadow-lg p-8">
@@ -113,17 +138,14 @@ export default function CaseStudiesPage() {
             </div>
           </div>
 
-          {/* Timeline Projects */}
           <div className="lg:col-span-8 min-w-0">
             <h3 className="text-2xl font-bold text-gray-600 mb-6">Selected Case Studies</h3>
             <div className="relative pl-8 lg:pl-12 border-l-2 border-green-600">
               {cases.map((c, i) => (
                 <div key={i} className="relative mb-12 last:mb-0">
-                  {/* Dot */}
                   <span className="absolute -left-10 lg:-left-14 top-0 w-3.5 h-3.5 bg-white border-2 border-green-600 rounded-full" />
 
                   <div className="bg-white rounded-xl shadow-[inset_0_0_7px_2px_rgba(0,0,0,0.1)] p-8">
-                    {/* Title Row - Clickable only if url exists */}
                     <div className="flex items-center gap-3 mb-3">
                       {c.url ? (
                         <a
@@ -140,43 +162,108 @@ export default function CaseStudiesPage() {
                       )}
                     </div>
 
-                    {/* Subtitle */}
-                    <p className="text-lg font-medium text-gray-600 mb-6">
-                      {c.subtitle}
-                    </p>
+                    <p className="text-lg font-medium text-gray-600 mb-6">{c.subtitle}</p>
 
-                    {/* Paragraphs */}
                     {c.paragraphs.map((p, pi) => (
-                      <p key={pi} className="text-gray-700 font-medium font-mono leading-relaxed mb-4 last:mb-0">
+                      <p
+                        key={pi}
+                        className="text-gray-700 font-medium font-mono leading-relaxed mb-4 last:mb-0"
+                      >
                         {p}
                       </p>
                     ))}
 
-                    {c.liveMockupUrl && (
-                      <p className="mt-6 text-gray-700 font-medium font-mono">
-                        Live mock-up:{' '}
-                        <a 
-                          href={c.liveMockupUrl} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-green-600 hover:underline"
-                        >
-                          {c.liveMockupUrl}
-                        </a>
-                      </p>
+                    {Array.isArray(c.process) && c.process.length > 0 && (
+                      <div className="mt-8">
+                        {c.processHeading ? (
+                          <h5 className="text-lg font-bold text-gray-600 mb-4">
+                            {c.processHeading}
+                          </h5>
+                        ) : null}
+                        <ol className="space-y-4">
+                          {c.process.map((item, si) => (
+                            <li key={si} className="flex gap-3">
+                              <span className="shrink-0 font-mono text-sm font-bold text-green-600 w-8 pt-0.5">
+                                {item.step}
+                              </span>
+                              <div className="min-w-0">
+                                <p className="font-bold text-gray-700">{item.title}</p>
+                                <p className="text-gray-700 font-medium font-mono leading-relaxed">
+                                  {item.body}
+                                </p>
+                              </div>
+                            </li>
+                          ))}
+                        </ol>
+                      </div>
                     )}
-                    {c.currentSiteUrl && (
-                      <p className="text-gray-700 font-medium font-mono">
-                        Current site:{' '}
-                        <a 
-                          href={c.currentSiteUrl} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="text-green-600 hover:underline"
-                        >
-                          {c.currentSiteUrl}
-                        </a>
-                      </p>
+
+                    {c.statusNote ? (
+                      <div className="mt-8">
+                        {c.statusLabel ? (
+                          <h5 className="text-lg font-bold text-gray-600 mb-2">
+                            {c.statusLabel}
+                          </h5>
+                        ) : null}
+                        <p className="text-gray-700 font-medium font-mono leading-relaxed">
+                          {c.statusNote}
+                        </p>
+                      </div>
+                    ) : null}
+
+                    {Array.isArray(c.closing) && c.closing.length > 0
+                      ? c.closing.map((p, ci) => (
+                          <p
+                            key={ci}
+                            className="mt-4 text-gray-700 font-medium font-mono leading-relaxed"
+                          >
+                            {p}
+                          </p>
+                        ))
+                      : null}
+
+                    {(c.processPdfUrl || c.liveMockupUrl || c.currentSiteUrl) && (
+                      <div className="mt-6 space-y-2">
+                        {c.processPdfUrl ? (
+                          <p className="text-gray-700 font-medium font-mono">
+                            Discovery &amp; UX Requirements:{' '}
+                            <a
+                              href={c.processPdfUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-green-600 hover:underline"
+                            >
+                              PDF
+                            </a>
+                          </p>
+                        ) : null}
+                        {c.liveMockupUrl ? (
+                          <p className="text-gray-700 font-medium font-mono">
+                            Live mock-up:{' '}
+                            <a
+                              href={c.liveMockupUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-green-600 hover:underline"
+                            >
+                              {c.liveMockupUrl}
+                            </a>
+                          </p>
+                        ) : null}
+                        {c.currentSiteUrl ? (
+                          <p className="text-gray-700 font-medium font-mono">
+                            Current site:{' '}
+                            <a
+                              href={c.currentSiteUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-green-600 hover:underline"
+                            >
+                              {c.currentSiteUrl}
+                            </a>
+                          </p>
+                        ) : null}
+                      </div>
                     )}
                   </div>
                 </div>
