@@ -16,9 +16,6 @@ export default function AboutPage() {
           </div>
 
           <div className="text-xl max-w-none text-gray-700 space-y-6">
-            <p>
-                Born in Huntsville, Alabama. Son of an Apollo-era rocket scientist who helped beat the Soviets to the moon. We moved north when I was young. My parents loved New Hampshire&apos;s lakes and independent spirit. They built a home in Wolfeboro for retirement. Life took detours—ten years ago my wife and I made it our own after traveling the country. We&apos;ve seen all 50 states... and the Live Free or <span className="line-through decoration-red-600 decoration-2">Die</span> <span className="font-bold">Fight</span> state is still #1.
-            </p>
 
             <p>
                 Since 2018, I&apos;ve been building modern websites—primarily for small businesses in New Hampshire&apos;s Lakes Region. I began the old-school way by finding outdated sites, creating improved mockups, and reaching out directly. Cold calling takes a thick skin—one sale in fifteen is a win—but persistence and quality deliver results.
@@ -50,15 +47,14 @@ export default function AboutPage() {
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h3 className="text-2xl font-semibold text-gray-900 mb-4">Music</h3>
               <p className="text-gray-700">
-                Guitarist, songwriter, and co-founder of BOB (1990s Atlanta band). Five albums, East Coast tours, and reunion shows in 2018. Still writing and playing today.
+                I also enjoy creating music and have built a few websites for musicians. Here are a couple of my favorites:
               </p>
               <div className="mt-4 space-y-2">
-                <a href="https://bob-atlanta.com" target="_blank" rel="noopener" className="block text-green-600 font-semibold underline hover:text-blue-600">
-                  bob-atlanta.com →
-                </a>
-                <p className="text-gray-700">A site I built for a talented Wolfeboro songwriter for his Already Ghosts project:</p>
                 <a href="https://thealreadyghosts.com" target="_blank" rel="noopener" className="block text-green-600 font-semibold underline hover:text-blue-600">
                   thealreadyghosts.com →
+                </a>
+                <a href="https://bob-atlanta.com" target="_blank" rel="noopener" className="block text-green-600 font-semibold underline hover:text-blue-600">
+                  bob-atlanta.com →
                 </a>
               </div>
             </div>
@@ -66,7 +62,7 @@ export default function AboutPage() {
 
           <div className="mt-16 text-center">
             <p className="text-2xl text-gray-800">
-              Ready to upgrade your online presence? <Link href="/#contact" className="text-green-600 font-bold underline hover:text-blue-600">Let&apos;s connect.</Link>
+              Ready to upgrade your online presence? <Link href="/#contact" className="text-green-600 font-bold underline hover:text-blue-600">Contact me.</Link>
             </p>
           </div>
         </div>
