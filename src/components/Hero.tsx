@@ -1,6 +1,8 @@
 // src/components/Hero.tsx
 "use client";
 
+import { PhoneIcon } from '@heroicons/react/24/solid';
+
 export default function Hero() {
   const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -23,7 +25,7 @@ export default function Hero() {
         <div className="max-w-4xl mx-auto text-center">
           {/* Tag */}
           <span className="inline-block bg-green-700/50 backdrop-blur-sm border border-green-400/30 text-white px-6 py-3 rounded-full text-sm font-bold tracking-wider mb-8">
-            RICH HUDSON • WEB DEVELOPER
+            RICH HUDSON • WEB DEVELOPER & DIGITAL STRATEGIST
           </span>
 
           {/* Headline */}
@@ -31,7 +33,7 @@ export default function Hero() {
             Clear websites that load fast and are easy to update. 
           </h1>
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-amber-400 mb-12">
+          <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-amber-500 mb-12">
             Based in Wolfeboro. Available for hire.
           </p>
 
@@ -40,16 +42,17 @@ export default function Hero() {
             <a
               href="#contact"
               onClick={handleContactClick}
-              className="inline-flex items-center px-10 py-5 bg-green-700 text-white text-lg font-semibold rounded-full hover:bg-green-800 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 cursor-pointer"
+              className="inline-flex items-center px-10 py-5 bg-white/20 backdrop-blur-md text-white text-lg font-semibold rounded-full border border-white/30 hover:bg-white/40 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 cursor-pointer"
             >
-              Get a Free Website Review
+              Get a Free Website Audit
             </a>
 
             <a
-              href="/portfolio"
-              className="inline-flex items-center px-10 py-5 bg-white/20 backdrop-blur-md text-white text-lg font-semibold rounded-full border border-white/30 hover:bg-white/30 transition-all duration-300"
+              href="tel:8022226473"
+              className="inline-flex items-center px-10 py-5 bg-white/20 backdrop-blur-md text-white text-lg font-semibold rounded-full border border-white/30 hover:bg-white/40 hover:-translate-y-1 transition-all duration-300"
             >
-              View Portfolio
+              <PhoneIcon className="h-6 w-6 mr-2" />
+              (802) 222-6473
             </a>
           </div>
         </div>

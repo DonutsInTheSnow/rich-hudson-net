@@ -160,13 +160,14 @@ export default function CaseStudiesPage() {
 
         <div className="grid lg:grid-cols-12 gap-12">
           <div className="lg:col-span-4 min-w-0">
-            <h3 className="text-2xl font-bold text-gray-600 mb-6">My Approach</h3>
+            <h3 className="text-2xl font-bold text-gray-600 mb-6">What These Studies Show</h3>
             <div className="bg-white rounded-xl shadow-lg p-8">
-              <h4 className="text-xl font-semibold mb-4 text-gray-800">Let&apos;s talk about what your site could be.</h4>
+              {/* <h4 className="text-xl font-semibold mb-4 text-gray-800"></h4> */}
               <p className="text-gray-700 font-semibold leading-relaxed">
-                Your website is often the first impression customers have of your business—like a front yard that&apos;s either well maintained or overgrown.
-                Some sites are like gardens left untended for years: confusing, slow, broken links, forgotten blogs, fonts almost unreadable on mobile. They turn visitors away before they ever step inside. Consumers judge quickly—and harshly. You don&apos;t need an extravagant showcase to stand out. A clean, fast, easy-to-navigate site built on modern tools invites repeat visits and turns interest into action.
-                I&apos;m a Wolfeboro-based developer focused on performance, clarity, and long-term results. If your current site feels outdated or underperforming, contact me.
+                Each website has its own challenges. The case studies make that plain: one size does not fit all.
+              </p>
+              <p className="text-gray-700 font-semibold mt-3">
+                One rule does travel. A good site respects the visitor&apos;s time. It answers their questions and makes it easy to inquire, buy, book, or get in touch.
               </p>
             </div>
           </div>

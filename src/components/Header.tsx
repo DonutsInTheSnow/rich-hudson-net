@@ -9,10 +9,10 @@ import { Bars2Icon, XMarkIcon } from '@heroicons/react/24/outline';
 const navLinks = [
   { name: 'Home', href: '/' },
   // { name: 'Quick Site Special', href: '/quick-site' },
-  { name: 'About', href: '/about' },
-  { name: 'Blog', href: '/blog' },
   { name: 'Case Studies', href: '/case-studies' },
-  { name: 'Contact', href: '/#contact' },
+  { name: 'Portfolio', href: '/portfolio' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'About', href: '/about' },
 ];
 
 export default function Header() {
@@ -81,10 +81,10 @@ export default function Header() {
   const isActive = (href: string) => {
     if (href === '/') return pathname === '/' && !isContactInView;
     // if (href === '/quick-site') return pathname === '/quick-site';
-    if (href === '/about') return pathname === '/about';
-    if (href === '/blog') return pathname.startsWith('/blog');
     if (href === '/case-studies') return pathname === '/case-studies';
-    if (href === '/#contact') return pathname === '/' && isContactInView;
+    if (href === '/portfolio') return pathname === '/portfolio';
+    if (href === '/blog') return pathname.startsWith('/blog');
+    if (href === '/about') return pathname === '/about';
     return false;
   };
 
