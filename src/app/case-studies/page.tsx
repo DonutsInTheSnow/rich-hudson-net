@@ -5,15 +5,15 @@ type ProcessStep = {
   step: string;
   title: string;
   body: string;
+  href?: string;
+  linkLabel?: string;
 };
 
 type CaseStudy = {
   title: string;
   subtitle: string;
   url?: string;
-  liveMockupUrl?: string;
   currentSiteUrl?: string;
-  processPdfUrl?: string;
   paragraphs: string[];
   processHeading?: string;
   process?: ProcessStep[];
@@ -27,29 +27,63 @@ const cases: CaseStudy[] = [
     title: 'Lakes Region Repeater Association',
     subtitle: 'Website Strategy, UX/UI Design & WordPress Prototype',
     url: '',
-    liveMockupUrl: 'https://vivacious-addax-cab5c2.instawp.site/',
     currentSiteUrl: 'https://www.w1bst.org/',
-    processPdfUrl: '/case-studies/lrra-website-discovery.pdf',
     paragraphs: [
       'The Lakes Region Repeater Association (LRRA) has more than 50 years of history, a large amount of useful amateur-radio information, and an active community. Its existing website contains that information, but the homepage and navigation make it difficult for visitors—particularly newcomers—to quickly understand where to begin.',
-      'I created a working WordPress landing page prototype focused on information architecture, visitor experience, and content organization rather than simply giving the existing site a visual makeover.',
     ],
     processHeading: 'Project in Progress',
     process: [
-      { step: '01', title: 'Discovery & UX Requirements', body: 'Identified primary audiences, visitor goals, content priorities, and problems with the current experience.' },
-      { step: '02', title: 'Content Audit', body: 'Reviewing existing content to determine what should be retained, consolidated, reorganized, or moved.' },
-      { step: '03', title: 'Information Architecture', body: "Developing a simplified sitemap and navigation structure around visitor tasks rather than the organization's existing collection of pages." },
-      { step: '04', title: 'User Flows', body: 'Mapping key journeys such as getting started with amateur radio, finding repeater information, joining LRRA, and finding events.' },
-      { step: '05', title: 'Wireframes', body: 'Creating low-fidelity page layouts in Figma to establish hierarchy, content structure, and navigation before visual styling.' },
-      { step: '06', title: 'UI Design', body: 'Developing the visual system, responsive layouts, components, and interaction patterns in Figma.' },
-      { step: '07', title: 'WordPress Prototype', body: 'Translating the UX/UI direction into a working GeneratePress + WordPress prototype for evaluation.' },
-      { step: '08', title: 'Testing & Iteration', body: 'Testing the experience across desktop and mobile, gathering feedback, and refining the design.' },
+      {
+        step: '01',
+        title: 'Discovery & UX Requirements',
+        body: 'Identified primary audiences, visitor goals, content priorities, and problems with the current experience.',
+        href: '/case-studies/lrra-website-discovery.pdf',
+        linkLabel: 'PDF',
+      },
+      {
+        step: '02',
+        title: 'Content Audit',
+        body: 'Reviewing existing content to determine what should be retained, consolidated, reorganized, or moved.',
+        href: '/case-studies/Case-Studies-Content-Audit.pdf',
+        linkLabel: 'PDF',
+      },
+      {
+        step: '03',
+        title: 'Information Architecture',
+        body: "Developing a simplified sitemap and navigation structure around visitor tasks rather than the organization's existing collection of pages.",
+      },
+      {
+        step: '04',
+        title: 'User Flows',
+        body: 'Mapping key journeys such as getting started with amateur radio, finding repeater information, joining LRRA, and finding events.',
+      },
+      {
+        step: '05',
+        title: 'Wireframes',
+        body: 'Creating low-fidelity page layouts in Figma to establish hierarchy, content structure, and navigation before visual styling.',
+      },
+      {
+        step: '06',
+        title: 'UI Design',
+        body: 'Developing the visual system, responsive layouts, components, and interaction patterns in Figma.',
+      },
+      {
+        step: '07',
+        title: 'WordPress',
+        body: 'Translating the UX/UI direction into a working GeneratePress + WordPress prototype for evaluation.',
+        href: 'https://vivacious-addax-cab5c2.instawp.site/',
+        linkLabel: 'Prototype',
+      },
+      {
+        step: '08',
+        title: 'Testing & Iteration',
+        body: 'Testing the experience across desktop and mobile, gathering feedback, and refining the design.',
+      },
     ],
     statusLabel: 'Current Status',
-    statusNote: 'The project is currently at the Discovery / Information Architecture / Prototype stage.',
+    statusNote: 'The project is currently at the 03 Information Architecture stage.',
     closing: [
-      'The prototype focuses on giving visitors a clearer path to understand LRRA, get started with amateur radio, become involved, and find the practical information they need.',
-      'This project is being developed as a proposed redesign and is not yet an LRRA-commissioned website.',
+      'The current WP prototype is a basic landing page and focuses on giving visitors a clearer path to understand LRRA, get started with amateur radio, become involved, and find the practical information they need.',
     ],
   },
   {
@@ -68,7 +102,7 @@ const cases: CaseStudy[] = [
     ],
   },
   {
-    title: 'DJ\'s Septic Pumping Service, Inc.',
+    title: "DJ's Septic Pumping Service, Inc.",
     subtitle: 'Local SEO & Performance',
     url: 'https://djssepticpumping.com/',
     paragraphs: [
@@ -92,7 +126,7 @@ const cases: CaseStudy[] = [
       'John found me through a mutual contact and wanted a dynamic project management site for his team (CRUD functionality). He also aimed for strong SEO rankings and ad campaigns, so I connected him with a reliable marketing specialist.',
       'I added Open Graph tags, tracking scripts, sitemap, blog, privacy policy, and form thank-you pages to support SEO and ads. Traffic grew significantly as a result.',
       'He added a hero video — a performance trade-off, but justified by industry data showing ~80% conversion lifts from video.',
-      'Handed off to a Las Vegas agency in mid-2024. Their current mobile PSI is 60. For contrast, my recent vanilla JavaScript renovation of DJ\'s is 93.',
+      "Handed off to a Las Vegas agency in mid-2024. Their current mobile PSI is 60. For contrast, my recent vanilla JavaScript renovation of DJ's is 93.",
       'These days browsers have excellent built-in tools for things like smooth scrolling, fade-ins, and subtle animations. By using those native features (plain HTML, CSS, and clean JavaScript) instead of older add-on libraries, I can deliver the same great look and feel with far less code and much faster speeds.',
     ],
   },
@@ -101,8 +135,8 @@ const cases: CaseStudy[] = [
     subtitle: 'Modernization & Migration',
     url: 'https://drrichardneal.com/',
     paragraphs: [
-      'Dr. Neal\'s office took a chance on me, and I delivered. As a dental patient turned resident web developer, I revamped his outdated site—swapping low-res images, pruning irrelevant content, fixing broken links (including a payment portal), and modernizing the landing page.',
-      'I also seamlessly migrated his email to GoDaddy hosting with zero downtime. SEO wasn\'t the goal here—demand\'s already sky-high, with appointments booked six months out.',
+      "Dr. Neal's office took a chance on me, and I delivered. As a dental patient turned resident web developer, I revamped his outdated site—swapping low-res images, pruning irrelevant content, fixing broken links (including a payment portal), and modernizing the landing page.",
+      "I also seamlessly migrated his email to GoDaddy hosting with zero downtime. SEO wasn't the goal here—demand's already sky-high, with appointments booked six months out.",
     ],
   },
   {
@@ -130,10 +164,9 @@ export default function CaseStudiesPage() {
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h4 className="text-xl font-semibold mb-4 text-gray-800">Let&apos;s talk about what your site could be.</h4>
               <p className="text-gray-700 font-semibold leading-relaxed">
-                Your website is often the first impression customers have of your business—like a front yard that&apos;s either welcoming or overgrown.
-                Many sites I see are like gardens left untended for years: confusing, slow, broken links, forgotten blogs, fonts almost unreadable on mobile. They turn visitors away before they ever step inside. Consumers judge quickly—and harshly. It&apos;s their money, after all.
-                You don&apos;t need an extravagant showcase to stand out. A clean, fast, easy-to-navigate site built on modern tools invites repeat visits and turns interest into action.
-                I&apos;m a Wolfeboro-based developer focused on performance, clarity, and long-term results. If your current site feels outdated or underperforming, let&apos;s talk about what&apos;s possible.
+                Your website is often the first impression customers have of your business—like a front yard that&apos;s either well maintained or overgrown.
+                Some sites are like gardens left untended for years: confusing, slow, broken links, forgotten blogs, fonts almost unreadable on mobile. They turn visitors away before they ever step inside. Consumers judge quickly—and harshly. You don&apos;t need an extravagant showcase to stand out. A clean, fast, easy-to-navigate site built on modern tools invites repeat visits and turns interest into action.
+                I&apos;m a Wolfeboro-based developer focused on performance, clarity, and long-term results. If your current site feels outdated or underperforming, contact me.
               </p>
             </div>
           </div>
@@ -187,7 +220,22 @@ export default function CaseStudiesPage() {
                                 {item.step}
                               </span>
                               <div className="min-w-0">
-                                <p className="font-bold text-gray-700">{item.title}</p>
+                                <p className="font-bold text-gray-700">
+                                  {item.title}
+                                  {item.href ? (
+                                    <>
+                                      {' '}
+                                      <a
+                                        href={item.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="font-mono font-medium text-green-600 hover:underline"
+                                      >
+                                        {item.linkLabel ?? 'PDF'}
+                                      </a>
+                                    </>
+                                  ) : null}
+                                </p>
                                 <p className="text-gray-700 font-medium font-mono leading-relaxed">
                                   {item.body}
                                 </p>
@@ -222,34 +270,7 @@ export default function CaseStudiesPage() {
                         ))
                       : null}
 
-                    {(c.processPdfUrl || c.liveMockupUrl || c.currentSiteUrl) && (
                       <div className="mt-6 space-y-2">
-                        {c.processPdfUrl ? (
-                          <p className="text-gray-700 font-medium font-mono">
-                            Discovery &amp; UX Requirements:{' '}
-                            <a
-                              href={c.processPdfUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-green-600 hover:underline"
-                            >
-                              PDF
-                            </a>
-                          </p>
-                        ) : null}
-                        {c.liveMockupUrl ? (
-                          <p className="text-gray-700 font-medium font-mono">
-                            Live mock-up:{' '}
-                            <a
-                              href={c.liveMockupUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-green-600 hover:underline"
-                            >
-                              {c.liveMockupUrl}
-                            </a>
-                          </p>
-                        ) : null}
                         {c.currentSiteUrl ? (
                           <p className="text-gray-700 font-medium font-mono">
                             Current site:{' '}
@@ -264,7 +285,6 @@ export default function CaseStudiesPage() {
                           </p>
                         ) : null}
                       </div>
-                    )}
                   </div>
                 </div>
               ))}
