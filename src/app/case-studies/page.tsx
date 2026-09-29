@@ -51,6 +51,8 @@ const cases: CaseStudy[] = [
         step: '03',
         title: 'Information Architecture',
         body: "Developing a simplified sitemap and navigation structure around visitor tasks rather than the organization's existing collection of pages.",
+        href: "/case-studies/LRRA-IA-sitemap@2x.png",
+        linkLabel: 'PNG',
       },
       {
         step: '04',
@@ -81,7 +83,7 @@ const cases: CaseStudy[] = [
       },
     ],
     statusLabel: 'Current Status',
-    statusNote: 'The project is currently at the 03 Information Architecture stage.',
+    statusNote: 'The project is currently at the 04 User Flows stage.',
     closing: [
       'The current WP prototype is a basic landing page and focuses on giving visitors a clearer path to understand LRRA, get started with amateur radio, become involved, and find the practical information they need.',
     ],
@@ -162,7 +164,6 @@ export default function CaseStudiesPage() {
           <div className="lg:col-span-4 min-w-0">
             <h3 className="text-2xl font-bold text-gray-600 mb-6">What These Studies Show</h3>
             <div className="bg-white rounded-xl shadow-lg p-8">
-              {/* <h4 className="text-xl font-semibold mb-4 text-gray-800"></h4> */}
               <p className="text-gray-700 font-semibold leading-relaxed">
                 Each website has its own challenges. The case studies make that plain: one size does not fit all.
               </p>

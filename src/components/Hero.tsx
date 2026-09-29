@@ -30,7 +30,7 @@ export default function Hero() {
 
           {/* Headline */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white mb-8">
-            Clear websites that load fast and are easy to update. 
+            Clear websites that load fast and are easy to maintain. 
           </h1>
           {/* Subheadline */}
           <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-amber-500 mb-12">
