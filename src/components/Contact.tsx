@@ -59,7 +59,7 @@ export default function Contact() {
                 type="text"
                 name="subject"   
                 id="website"
-                placeholder="Your Current Website (if applicable) e.g. mywebsite.com or https://mywebsite.com"
+                placeholder="Your Website URL e.g. mywebsite.com or https://mywebsite.com"
                 className="w-full text-gray-800 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent placeholder:italic placeholder:text-gray-600"
               />
             </div>
@@ -69,7 +69,7 @@ export default function Contact() {
                 name="message"
                 id="message"
                 rows={6}
-                placeholder="What do you want to improve about your current website? What are your goals for this project? What is your timeline? The more details you can provide, the better I can understand your needs and how I can help."
+                placeholder="Provide your phone number if you'd prefer a phone call to discuss the audit findings. Also provide any additional details or questions you have."
                 required
                 className="w-full text-gray-800 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600 focus:border-transparent resize-none placeholder:italic placeholder:text-gray-600"
               />
