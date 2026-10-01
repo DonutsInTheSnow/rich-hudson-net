@@ -58,6 +58,8 @@ const cases: CaseStudy[] = [
         step: '04',
         title: 'User Flows',
         body: 'Mapping key journeys such as getting started with amateur radio, finding repeater information, joining LRRA, and finding events.',
+        href: '/case-studies/LRRA-User-Flows.png',
+        linkLabel: 'PNG',
       },
       {
         step: '05',
@@ -83,7 +85,7 @@ const cases: CaseStudy[] = [
       },
     ],
     statusLabel: 'Current Status',
-    statusNote: 'The project is currently at the 04 User Flows stage.',
+    statusNote: 'The project is currently at the 05 Wireframes stage.',
     closing: [
       'The current WP prototype is a basic landing page and focuses on giving visitors a clearer path to understand LRRA, get started with amateur radio, become involved, and find the practical information they need.',
     ],
