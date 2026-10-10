@@ -1,5 +1,6 @@
 
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid';
+import Image from 'next/image';
 
 type ProcessStep = {
   step: string;
@@ -7,6 +8,10 @@ type ProcessStep = {
   body: string;
   href?: string;
   linkLabel?: string;
+  images?: {
+    title: string;
+    src: string;
+  }[];
 };
 
 type CaseStudy = {
@@ -64,7 +69,19 @@ const cases: CaseStudy[] = [
       {
         step: '05',
         title: 'Wireframes',
-        body: 'Creating low-fidelity page layouts in Figma to establish hierarchy, content structure, and navigation before visual styling.',
+        body: 'Created low-fidelity page layouts in Figma to establish content hierarchy, navigation, and user interactions before visual styling.',
+        images: [
+          { title: 'Home', src: '/case-studies/lrra-home.webp' },
+          { title: 'Amateur Radio', src: '/case-studies/lrra-amateur-radio.webp' },
+          { title: 'Repeaters', src: '/case-studies/lrra-repeaters.webp' },
+          { title: 'About', src: '/case-studies/lrra-about.webp' },
+          { title: 'Events', src: '/case-studies/lrra-events.webp' },
+          { title: 'For Sale', src: '/case-studies/lrra-for-sale.webp' },
+          { title: 'Contact', src: '/case-studies/lrra-contact.webp' },
+          { title: 'Resources', src: '/case-studies/lrra-resources.webp' },
+          { title: 'Members Only Login', src: '/case-studies/lrra-members-only-login.webp' },
+          { title: 'Members Only', src: '/case-studies/lrra-members-only.webp' },
+        ],
       },
       {
         step: '06',
@@ -75,8 +92,6 @@ const cases: CaseStudy[] = [
         step: '07',
         title: 'WordPress',
         body: 'Translating the UX/UI direction into a working GeneratePress + WordPress prototype for evaluation.',
-        href: 'https://vivacious-addax-cab5c2.instawp.site/',
-        linkLabel: 'Prototype',
       },
       {
         step: '08',
@@ -85,9 +100,9 @@ const cases: CaseStudy[] = [
       },
     ],
     statusLabel: 'Current Status',
-    statusNote: 'The project is currently at the 05 Wireframes stage.',
+    statusNote: 'UX wireframes completed. Preparing for UI Design and prototyping.',
     closing: [
-      'The current WP prototype is a basic landing page and focuses on giving visitors a clearer path to understand LRRA, get started with amateur radio, become involved, and find the practical information they need.',
+      'The UX process revealed opportunities to simplify LRRA\'s navigation, consolidate fragmented content, and organize information around visitor needs. Key decisions included creating a clearer path for newcomers to amateur radio, making repeater information easier to find, reducing redundant calls to action, and distinguishing public resources from member-only functions. These findings now provide the foundation for the UI design and WordPress development phases.',
     ],
   },
   {
@@ -243,6 +258,33 @@ export default function CaseStudiesPage() {
                                 <p className="text-gray-700 font-medium font-mono leading-relaxed">
                                   {item.body}
                                 </p>
+                                {item.images && (
+                                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-4">
+                                    {item.images.map((image) => (
+                                      <a
+                                        key={image.src}
+                                        href={image.src}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="group block min-w-0"
+                                        aria-label={`View ${image.title} wireframe`}
+                                      >
+                                        <Image
+                                          src={image.src}
+                                          alt={`${image.title} wireframe for LRRA`}
+                                          loading="lazy"
+                                          width={300}
+                                          height={400}
+                                          sizes="(max-width: 640px) 50vw, 200px"
+                                          className="w-full aspect-3/4 object-contain rounded border border-gray-200 bg-gray-50 group-hover:border-green-600 transition-colors"
+                                        />
+                                        <span className="block text-xs text-center text-gray-600 mt-1 group-hover:text-green-600">
+                                          {image.title}
+                                        </span>
+                                      </a>
+                                    ))}
+                                  </div>
+                                )}
                               </div>
                             </li>
                           ))}
