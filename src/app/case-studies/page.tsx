@@ -100,9 +100,9 @@ const cases: CaseStudy[] = [
       },
     ],
     statusLabel: 'Current Status',
-    statusNote: 'UX wireframes completed. Preparing for UI Design and prototyping.',
+    statusNote: 'UI Design and prototyping completed. Next step is WordPress development.',
     closing: [
-      'The UX process revealed opportunities to simplify LRRA\'s navigation, consolidate fragmented content, and organize information around visitor needs. Key decisions included creating a clearer path for newcomers to amateur radio, making repeater information easier to find, reducing redundant calls to action, and distinguishing public resources from member-only functions. These findings now provide the foundation for the UI design and WordPress development phases.',
+      'The UX process revealed opportunities to simplify LRRA\'s navigation, consolidate fragmented content, and organize information around visitor needs. Key decisions included creating a clearer path for newcomers to amateur radio, making repeater information easier to find, reducing redundant calls to action, and distinguishing public resources from member-only functions.',
     ],
   },
   {
