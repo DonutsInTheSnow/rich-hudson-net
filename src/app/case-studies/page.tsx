@@ -30,7 +30,7 @@ type CaseStudy = {
 const cases: CaseStudy[] = [
   {
     title: 'Lakes Region Repeater Association',
-    subtitle: 'Website Strategy, UX/UI Design & WordPress Prototype',
+    subtitle: 'UX Research, Responsive UI Design & WordPress Development Planning',
     url: '',
     currentSiteUrl: 'https://www.w1bst.org/',
     paragraphs: [
@@ -102,7 +102,7 @@ const cases: CaseStudy[] = [
     statusLabel: 'Current Status',
     statusNote: 'UI Design and prototyping completed. Next step is WordPress development.',
     closing: [
-      'The UX process revealed opportunities to simplify LRRA\'s navigation, consolidate fragmented content, and organize information around visitor needs. Key decisions included creating a clearer path for newcomers to amateur radio, making repeater information easier to find, reducing redundant calls to action, and distinguishing public resources from member-only functions.',
+      'The UX process progressed from discovery and content auditing through information architecture, user flows, wireframes, and high-fidelity UI design in Figma. The resulting responsive designs simplify LRRA\'s navigation, consolidate fragmented content, and organize information around visitor needs. Key improvements include a clearer licensing pathway for newcomers, accessible repeater information, a streamlined Events & News archive, and a more engaging presentation of LRRA\'s community and public-service activities. A reusable design system ensures consistency across desktop, tablet, and mobile layouts while providing a practical foundation for WordPress implementation.',
     ],
   },
   {
