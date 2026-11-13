@@ -25,7 +25,7 @@ export default function Hero() {
         <div className="max-w-4xl mx-auto text-center">
           {/* Tag */}
           <span className="inline-block bg-green-700/50 backdrop-blur-sm border border-green-400/30 text-white px-6 py-3 rounded-full text-sm font-bold tracking-wider mb-8">
-            RICH HUDSON • WEB DEVELOPER & DIGITAL STRATEGIST
+            RICH HUDSON • SOFTWARE & WEB DEVELOPER
           </span>
 
           {/* Headline */}
