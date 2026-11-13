@@ -87,6 +87,12 @@ const cases: CaseStudy[] = [
         step: '06',
         title: 'UI Design',
         body: 'Developing the visual system, responsive layouts, components, and interaction patterns in Figma.',
+        images: [
+          { title: 'Home', src: '/case-studies/ui-home-desktop.webp' },
+          { title: 'Amateur Radio', src: '/case-studies/ui-about-gallery.webp' },
+          { title: 'Repeaters', src: '/case-studies/ui-repeaters-map.webp' },
+          { title: 'About', src: '/case-studies/ui-responsive-layout.webp' },
+        ],
       },
       {
         step: '07',
